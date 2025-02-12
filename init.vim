@@ -73,7 +73,10 @@ let mapleader=" " "default leader key is backslash (\). Now change to SPC
 " using 'which-key.nvim' plugin and then press SPC to see all supported key
 "
 " reload nvim with SPC-r
-nnoremap <leader>r :source $MYVIMRC<CR>``
+nnoremap <leader>r :source $MYVIMRC<CR>
+
+" selection copy in visual mode
+vnoremap <leader>y "+y
  
 " move cursor between windows
 " move left/down/up/right
