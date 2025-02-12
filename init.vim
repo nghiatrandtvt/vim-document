@@ -115,7 +115,7 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 " command alias 
 " open nerdtree in combination with new tab
-command! -complete=dir -nargs=* TN tabnew | execute 'NERDTree' <q-args>
+command! -complete=dir -nargs=* Nt tabnew | execute 'NERDTree' <q-args>
 let g:NERDTreeWinSize = 40 "NERD window size
  
 " use up/down arrow in wild mode (command mode when press TAB)
