@@ -110,3 +110,10 @@ Using ! to revert any boolean value
 :set nu! "to revert previous :set nu"
 :set rnu! "to revert previous :set rnu"
 ------------- END BOOLEAN REVERT ------------------
+
+------------ BASH ---------------
+:! "Use to trigger a execution command mode"
+:!bash <script_name> "run script even that script is not in execution mode"
+:! <script_name> "run script if it's in execution mode"
+:w !bash "run current buffer as script"
+---------- END BASH -------------
