@@ -1,0 +1,99 @@
+SPC-r "source .vimrc"
+ 
+-------------------- MOVING --------------------
+C-w-H "move all horizontal windows to verical windows"
+C-w-K "move all vertical windows to horizontal windows"
+ 
+SPC-h "move current window to left"
+SPC-l "move the current window to right"
+SPC-j "move the current window down"
+SPC-k "move the current window up"
+ 
+SPC-H "swap current window with the left one"
+SPC-L "swap current window with the right one"
+SPC-J "swap current window with the below one"
+SPC-K "swap current window with the upper one"
+ 
+j "from command mode to move cursor to new below line w/o swith to insert mode"
+------------------- END MOVING -------------------
+ 
+------------- WINDOW CLOSING ---------------
+:only "close all other windows, only keep the current window"
+:qa "quick all window"
+:q "quick current window"
+------------- WINDOW CLOSING ---------------
+ 
+------------ FULL SCREEN CONFIGURATION --------------
+C-w-_ "fullscreen window (height)"
+C-w-| "fullscreen window (width)"
+C-w-= "back to original status before do fullscreen"
+--------- END FULL SCREEN CONFIGURATION -------------
+ 
+--------------- RESIZE CONFIGURATION -----------------
+:resize +/-<size> "resize by height"
+:vertical resize +/- "resize by width"
+------------- END RESIZE CONFIGURATION ---------------
+ 
+--------------- BUFFER CONFIGURATION -----------------
+SPC-n "next buffer"
+:bd "buffer delete - close current buffer"
+:bd <n> "buffer delete - close buffer n-th"
+:bd! <n> "buffer delete - close buffer n-th w/o saving"
+SPC-b "list buffer and enter number of buffer to active"
+:ls "list buffer"
+:buffers "list buffer"
+:vsplit | b <n> "open buffer n-th with new vertical window"
+:split | b <n> "open buffer n-th with new horizontal window"
+------------- END BUFFER CONFIGURATION ---------------
+ 
+------------------ TAB ACTION -------------------
+:tabnew "open window/buffer/file/directory into new tab, Tab is the group of windows/files"
+:tabn <n> "go to tab n-th"
+:tabnext "go to next tab"
+C-t "go to next tab"
+:tabprev "go to previous tab"
+:tabonly "close all other tabs"
+:tabclose "close current tab"
+--------------- END TAB ACTION -------------------
+ 
+---------------- NERDTREE ACTION -----------------
+m "open nerdtree menu"
+o "collapse/uncollapse a specific sub directory"
+O "collapse all directories"
+X "uncollapse all directories"
+C-f "nerdtreefind"
+C-n "nerdtreetoggle"
+:TN <dir> "open directory (NERDTree) with new tab. This is user-defined command, must be capital letter"
+i "open file in horizontal"
+s "open file in vertical"
+--------------- END NERDTREE ACTION --------------
+ 
+--------------- GIT ACTION -----------------------
+Ctrl-c "exit git commit editor. Make sure you're in TERMINAL mode, not NORMAL mode"
+-------------- END GIT ACTION --------------------
+ 
+--------------- LSP CONFIGURATION -----------------
+gd "go to definition"
+gr "go to reference"
+K "hover, check function information"
+<SPC>-rn "rename"
+<SPC>-ca "code action, hint to fix bug"
+C-o "go backward"
+C-i "go forward"
+------------- END LSP CONFIGURATION ---------------
+ 
+---------------- TELESCOPE CONFIGURATION ----------
+<SPC>-f "telescope find_files. This will find in current directory. If want to change directory, need to do :cd <search_directory> first"
+<C>-v "open file in vsplit (vertical window)"
+<C>-x "open file in split (horizontal)"
+<C>-t "open file in new tab"
+:Telescope live_grep "grep string in all files in current directory and sub-directory"
+:Telescope grep_string "grep string in all files in current directory and sub-directory"
+:Telescope current_buffer_fuzzy_find "grep string in current window"
+--------------- END TELESCOPE CONFIGURATION -------
+
+--------------- BOOLEAN REVERT --------------------
+Using ! to revert any boolean value
+:set nu! "to revert previous :set nu"
+:set rnu! "to revert previous :set rnu"
+------------- END BOOLEAN REVERT ------------------
