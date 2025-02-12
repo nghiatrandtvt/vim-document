@@ -136,23 +136,7 @@ require'lspconfig'.pyright.setup{ capabilities = capabilities }
 require'lspconfig'.bashls.setup{}
 EOF
  
-" load cmp config. Default is from .config/nvim/lua/cmp-config.lua
-" content of cmp-config.lua likes as below
-"local cmp = require("cmp")
- 
-"cmp.setup({
-  "mapping = cmp.mapping.preset.insert({
-    "["<Tab>"] = cmp.mapping.select_next_item(),
-    "["<S-Tab>"] = cmp.mapping.select_prev_item(),
-    "["<CR>"] = cmp.mapping.confirm({ select = true }),
-  "}),
-  "sources = cmp.config.sources({
-    "{ name = "nvim_lsp" },
-    "{ name = "buffer" },
-    "{ name = "path" },
-  "})
-"})
- 
+" load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
 lua require("cmp-config")
  
 lua << EOF
