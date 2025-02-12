@@ -50,7 +50,8 @@ SPC-bd "list buffer then delete the selected one"
 ------------- END BUFFER ---------------
  
 ------------------ TAB -------------------
-C-t "go to next tab"
+SPC-tn "go to next tab"
+SPC-to "tabnew"
 
 :tabnew "open window/buffer/file/directory into new tab, Tab is the group of windows/files"
 :tabn <n> "go to tab n-th"
@@ -65,6 +66,7 @@ C-t "go to next tab"
 
 SPC-nf "nerdtreefind"
 SPC-nt "nerdtreetoggle"
+SPC-no "nerdtree"
 
 m "open nerdtree menu"
 o "collapse/uncollapse a specific sub directory"
