@@ -74,9 +74,6 @@ let mapleader=" " "default leader key is backslash (\). Now change to SPC
 "
 " reload nvim with SPC-r
 nnoremap <leader>r :source $MYVIMRC<CR>
-
-" selection copy in visual mode
-vnoremap <leader>y "+y
  
 " move cursor between windows
 " move left/down/up/right
@@ -100,7 +97,8 @@ nnoremap <leader>bd :ls<CR>:bd!
  
 " TAB KEYBINDING
 " next tab
-nnoremap <C-t> :tabnext<CR>
+nnoremap <leader>tn :tabnext<CR>
+nnoremap <leader>to :tabnew
  
 " FZF KEYBINDING
 " FZF find file from specific directory
@@ -116,6 +114,7 @@ tnoremap <Esc> <C-\><C-n>
 " toggle/find
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>no :NERDTree 
 " command alias 
 " open nerdtree in combination with new tab
 command! -complete=dir -nargs=* Nt tabnew | execute 'NERDTree' <q-args>
