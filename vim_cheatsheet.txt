@@ -117,3 +117,44 @@ Using ! to revert any boolean value
 :! <script_name> "run script if it's in execution mode"
 :w !bash "run current buffer as script"
 ---------- END BASH -------------
+
+--------------------- COPY -------------------
+:% "means whole file content. It calls range mode (whole file)"
+:%y "copy whole file content"
+:1,10y "copy line 1 -> 10"
+yy "copy current line"
+yiw "copy current word"
+y "copy current character"
+y<n>w "copy <n> word from cursor. Example y6w - copy 6 words"
+y<n>l "copy <n> characters from cursor. Example y6l - copy 6 characters"
+y$ "copy from cursor to end of line include current character"
+y0 "copy from cursor (not include current character) to begining of line"
+yi{ "copy words inner {"
+yi[ "copy words inner ["
+------------------- END COPY -----------------
+
+--------------------- COPY CLIPBOARD -------------------
+"+ "mean register of clipboard"
+:%y+ "means whole file content (no need " because it's using range mode, not normal mode. NORMAL mode needs "+ to specify as register (clipboard))"
+:1,10y+ "copy from line 1 -> 10"
+"+yy "copy current line"
+"+yiw "copy current word"
+"+y "copy current character"
+"+y<n>w "copy <n> word from cursor. Example y6w - copy 6 words"
+"+y<n>l "copy <n> characters from cursor. Example y6l - copy 6 characters"
+"+y$ "copy from cursor to end of line include current character"
+"+y0 "copy from cursor (not include current character) to begining of line"
+"+yi{ "copy words inner {"
+"+yi[ "copy words inner ["
+------------------- END COPY CLIPBOARD -----------------
+
+----------------- DELETE ----------------------
+:%d "delete whole file content"
+dd "delete current line"
+d$ "delete current cursor to end of line (include cursor)"
+d0 "delete current cursor to begining of line (exclude cursor)"
+d<n>w "delete <n> words include current word"
+di{ "delete wors inner {"
+di[ |delete words inner ["
+d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
+-------------- END DELETE ---------------------
