@@ -128,47 +128,37 @@ cnoremap <expr> <Down> wildmenumode() ? "\<C-n>" : "\<Down>"
 " pyright for python. Need to install pyright and add to PATH
 " bash language server. Need to install bash language server and add to PATH
 " some of them are using NPM to install, so need nodejs to be installed ahead
+" load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
+lua require("cmp-config")
+
 lua << EOF
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
  
 require'lspconfig'.clangd.setup{ capabilities = capabilities }
 require'lspconfig'.pyright.setup{ capabilities = capabilities }
 require'lspconfig'.bashls.setup{}
-EOF
- 
-" load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
-lua require("cmp-config")
- 
-lua << EOF
+
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
 vim.keymap.set('n', '<leader>i', vim.lsp.buf.code_action, opts)
-EOF
- 
-" TELESCOPE CONFIGURATION AND KEYBINDING
-lua << EOF
+
+-- TELESCOPE CONFIGURATION AND KEYBINDING
 require('telescope').setup{
   defaults = {
     prompt_prefix = "🔍 ",
     selection_caret = "➜ "
   }
 }
-EOF
- 
-" key binding to show commit history of git repo
-" key binding to show commit history of current buffer
-lua << EOF
+
+-- key binding to show commit history of git repo
+-- key binding to show commit history of current buffer
 vim.api.nvim_set_keymap('n', '<leader>gh', ":Telescope git_bcommits<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>gc', ":Telescope git_commits<CR>", { noremap = true, silent = true })
-EOF
  
-highlight TelescopeSelection guibg=#800080 "telescope
- 
-" GITSIGNS CONFIGURATION and KEYBINDING
-lua << EOF
+-- GITSIGNS CONFIGURATION and KEYBINDING
 require('gitsigns').setup {
   signs = {
     add          = { text = '│' },
@@ -196,3 +186,5 @@ require('gitsigns').setup {
   end
 }
 EOF
+
+highlight TelescopeSelection guibg=#800080 "telescope
