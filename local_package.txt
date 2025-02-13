@@ -1,0 +1,4 @@
+clangd
+pyright
+npm-global/bash-language-server
+eclipse/jdt-language-server
