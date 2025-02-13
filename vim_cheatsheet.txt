@@ -150,6 +150,16 @@ yi[ "copy words inner ["
 "+yi[ "copy words inner ["
 ------------------- END COPY CLIPBOARD -----------------
 
+-------------------- PASTE ----------------------------
+p "to paste after cursor (line after cursor, not same line with cursor)"
+P "to paste before cursor (line before cursor, not same line with cursor)"
+SPC-p "to paste at the cursor"
+----------------- END PASTE --------------------------
+
+-------------------- PASTE CLIPBOARD ----------------------------
+SPC-p "to paste at the cursor. Same as normal paste"
+----------------- END PASTE CLIPBOARD --------------------------
+
 ----------------- DELETE ----------------------
 :%d "delete whole file content"
 dd "delete current line"
