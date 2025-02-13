@@ -109,6 +109,9 @@ nnoremap <leader>fg :BLines<CR>
  
 " exit from terminal mode
 tnoremap <Esc> <C-\><C-n>
+
+" paste
+nnoremap <leader>p "+p
  
 " NERDTREE KEYBINDING
 " toggle/find
