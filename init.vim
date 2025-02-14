@@ -107,7 +107,7 @@ nnoremap <leader>sf :Files<CR>
 " string exactly than w/o '
 nnoremap <leader>ss :BLines<CR>
 " grep string in current directory
-nnoremap <leader>ssa :Telescope live_grep<CR>
+nnoremap <leader>sa :Telescope live_grep<CR>
  
 " exit from terminal mode
 tnoremap <Esc> <C-\><C-n>
