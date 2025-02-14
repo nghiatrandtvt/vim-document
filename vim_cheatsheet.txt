@@ -62,11 +62,11 @@ SPC-to "tabnew"
 --------------- END TAB ACTION -------------------
  
 ---------------- NERDTREE -----------------
-:Nt <dir> "open directory (NERDTree) with new tab. This is user-defined command, must be capital letter"
+:Dt <dir> "open directory (NERDTree) with new tab. This is user-defined command, must be capital letter"
 
-SPC-nf "nerdtreefind"
-SPC-nt "nerdtreetoggle"
-SPC-no "nerdtree"
+SPC-df "nerdtreefind"
+SPC-dt "nerdtreetoggle"
+SPC-do "nerdtree"
 
 m "open nerdtree menu"
 o "collapse/uncollapse a specific sub directory"
@@ -87,6 +87,12 @@ SPC-gh "show git history of current buffer or current file" (Using telescope)
 SPC-gb "show git blame of specific line/statement of current file" (Using gitsigns)
 SPC-gd "git diff" (Using git signs)
 ----------- END GIT ------------------
+
+------------------ SEARCH -------------------
+SPC-sf "search file in current directory" (Use FZF)
+SPC-ss "search string in current file" (Use FZF)
+SPC-ssa "search string in current directory" (Use Telescope)
+---------------- END SEARCH -----------------
  
 --------------- LSP -----------------
 <SPC>-i "auto import"
