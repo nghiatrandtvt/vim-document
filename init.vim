@@ -107,6 +107,8 @@ nnoremap <leader>sf :Files<CR>
 " string exactly than w/o '
 nnoremap <leader>ss :BLines<CR>
 " grep string in current directory
+" another option is to use Ag with FZF. For example
+: :Ag <search string>
 nnoremap <leader>sa :Telescope live_grep<CR>
  
 " exit from terminal mode
