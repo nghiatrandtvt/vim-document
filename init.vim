@@ -102,10 +102,12 @@ nnoremap <leader>to :tabnew
  
 " FZF KEYBINDING
 " FZF find file from specific directory
-nnoremap <leader>ff :Files<CR>
+nnoremap <leader>sf :Files<CR>
 " FZF grep string in current buffer. Can use '<string_to_be_grep> to grep
 " string exactly than w/o '
-nnoremap <leader>fg :BLines<CR>
+nnoremap <leader>ss :BLines<CR>
+" grep string in current directory
+nnoremap <leader>ssa :Telescope live_grep<CR>
  
 " exit from terminal mode
 tnoremap <Esc> <C-\><C-n>
@@ -115,12 +117,12 @@ nnoremap <leader>p "+p
  
 " NERDTREE KEYBINDING
 " toggle/find
-nnoremap <leader>nt :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
-nnoremap <leader>no :NERDTree 
+nnoremap <leader>dt :NERDTreeToggle<CR>
+nnoremap <leader>df :NERDTreeFind<CR>
+nnoremap <leader>do :NERDTree 
 " command alias 
 " open nerdtree in combination with new tab
-command! -complete=dir -nargs=* Nt tabnew | execute 'NERDTree' <q-args>
+command! -complete=dir -nargs=* Dt tabnew | execute 'NERDTree' <q-args>
 let g:NERDTreeWinSize = 40 "NERD window size
  
 " use up/down arrow in wild mode (command mode when press TAB)
