@@ -91,7 +91,7 @@ SPC-gd "git diff" (Using git signs)
 ------------------ SEARCH -------------------
 SPC-sf "search file in current directory" (Use FZF)
 SPC-ss "search string in current file" (Use FZF)
-SPC-ssa "search string in current directory" (Use Telescope)
+SPC-sa "search string in current directory" (Use Telescope)
 ---------------- END SEARCH -----------------
  
 --------------- LSP -----------------
