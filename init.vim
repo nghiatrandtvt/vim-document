@@ -154,7 +154,10 @@ vim.keymap.set('n', '<leader>i', vim.lsp.buf.code_action, opts)
 require('telescope').setup{
   defaults = {
     prompt_prefix = "🔍 ",
-    selection_caret = "➜ "
+    selection_caret = "➜ ",
+	vimgrep_arguments = {
+	  'ag', '--nocolor', '--noheading', '--numbers', '--column'
+	}
   }
 }
 
