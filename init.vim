@@ -107,6 +107,15 @@ nnoremap <leader>bd :ls<CR>:bd!
 " next tab
 nnoremap <leader>tn :tabnext<CR>
 nnoremap <leader>to :tabnew
+nnoremap <leader>t1 :1tabnext<CR>
+nnoremap <leader>t2 :2tabnext<CR>
+nnoremap <leader>t3 :3tabnext<CR>
+nnoremap <leader>t4 :4tabnext<CR>
+nnoremap <leader>t5 :5tabnext<CR>
+nnoremap <leader>t6 :6tabnext<CR>
+nnoremap <leader>t7 :7tabnext<CR>
+nnoremap <leader>t8 :8tabnext<CR>
+nnoremap <leader>t9 :9tabnext<CR>
  
 " FZF KEYBINDING
 " FZF find file from specific directory
