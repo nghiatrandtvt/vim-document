@@ -169,10 +169,12 @@ yi[ "copy words inner ["
 p "to paste after cursor (line after cursor, not same line with cursor)"
 P "to paste before cursor (line before cursor, not same line with cursor)"
 SPC-p "to paste at the cursor"
+C-r " "paste from default register in INSERT mode"
 ----------------- END PASTE --------------------------
 
 -------------------- PASTE CLIPBOARD ----------------------------
 SPC-p "to paste at the cursor. Same as normal paste"
+C-r + "paste from clipboard register in INSERT mode"
 ----------------- END PASTE CLIPBOARD --------------------------
 
 ----------------- DELETE ----------------------
