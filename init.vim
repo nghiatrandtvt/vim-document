@@ -199,6 +199,7 @@ require('gitsigns').setup {
   signcolumn = true,
   numhl      = false,
   linehl     = false,
+  current_line_blame = true, -- enable display virtual git blame.
   word_diff  = false,
  
   on_attach = function(bufnr)
