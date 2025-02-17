@@ -36,6 +36,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'    " fetch data from nvim-lspconfig plugin
 Plug 'hrsh7th/cmp-buffer'      " fetch data from current buffer
 Plug 'hrsh7th/cmp-cmdline'     " autocomplete for command line 
 Plug 'L3MON4D3/LuaSnip'        " snippet support
+
+Plug 'tyru/open-browser.vim' "open url from neovim w/o copy the link to browser
 call plug#end()
  
 " THEME
@@ -64,6 +66,12 @@ set shiftwidth=4 "number of space when using for indent operator such as >> or <
 set softtabstop=4 "number of space when tab in insert mode
 set splitbelow "open window in below when :split
 set splitright "open window in right when :vsplit
+
+set clipboard=unnamedplus "always copy to clipboard register, not default register as default
+                          "it will benefit when paste with SPC-p (alias of "+p) that
+						  "always fetch from clipboard register
+						  "clipboard register is "+
+						  "default register is "0 or "
  
 let mapleader=" " "default leader key is backslash (\). Now change to SPC
  
