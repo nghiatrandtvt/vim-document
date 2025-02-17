@@ -52,6 +52,15 @@ SPC-bd "list buffer then delete the selected one"
 ------------------ TAB -------------------
 SPC-tn "go to next tab"
 SPC-to "tabnew"
+SPC-t1 "go to tab number 1"
+SPC-t2 "go to tab number 2"
+SPC-t3 "go to tab number 3"
+SPC-t4 "go to tab number 4"
+SPC-t5 "go to tab number 5"
+SPC-t6 "go to tab number 6"
+SPC-t7 "go to tab number 7"
+SPC-t8 "go to tab number 8"
+SPC-t9 "go to tab number 9"
 
 :tabnew "open window/buffer/file/directory into new tab, Tab is the group of windows/files"
 :tabn <n> "go to tab n-th"
@@ -176,3 +185,7 @@ di{ "delete wors inner {"
 di[ |delete words inner ["
 d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
 -------------- END DELETE ---------------------
+
+--------------- OPEN BROWSER -------------------
+gx "leave the cursor on the link and type gx"
+------------- END OPEN BROWSER -----------------
