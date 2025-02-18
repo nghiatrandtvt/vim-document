@@ -104,13 +104,13 @@ SPC-sa "search string in current directory" (Use Telescope)
 ---------------- END SEARCH -----------------
  
 --------------- LSP -----------------
-<SPC>-i "auto import"
+<SPC>-ca "auto import"
+<SPC>-ch "hover, check function information"
+<SPC>-cr "rename"
+<SPC>-cd "diagnostics"
 
 gd "go to definition"
 gr "go to reference"
-K "hover, check function information"
-
-<SPC>-rn "rename"
 
 C-o "go backward"
 C-i "go forward"
