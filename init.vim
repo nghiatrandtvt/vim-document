@@ -41,6 +41,8 @@ Plug 'L3MON4D3/LuaSnip'        " snippet support
 Plug 'tyru/open-browser.vim' "open url from neovim w/o copy the link to browser
 
 Plug 'mbbill/undotree' "show history of file
+
+Plug 'sindrets/winshift.nvim' "to swap window
 call plug#end()
  
 " THEME
@@ -98,10 +100,7 @@ nnoremap <silent> <leader>l :wincmd l<CR>
  
 " swap betwwen windows
 " swap left/down/up/right
-nnoremap <silent> <leader>H :wincmd H<CR>
-nnoremap <silent> <leader>J :wincmd J<CR>
-nnoremap <silent> <leader>K :wincmd K<CR>
-nnoremap <silent> <leader>L :wincmd L<CR>
+nnoremap <silent> <leader>x :WinShift swap<CR>
  
 " BUFFER KEYBINDING
 " next buffer/select buffer/delete buffer
