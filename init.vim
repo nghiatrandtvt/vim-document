@@ -38,6 +38,8 @@ Plug 'hrsh7th/cmp-cmdline'     " autocomplete for command line
 Plug 'L3MON4D3/LuaSnip'        " snippet support
 
 Plug 'tyru/open-browser.vim' "open url from neovim w/o copy the link to browser
+
+Plug 'mbbill/undotree' "show history of file
 call plug#end()
  
 " THEME
@@ -74,6 +76,9 @@ set clipboard=unnamedplus "always copy to clipboard register, not default regist
 						  "default register is "0 or "
  
 let mapleader=" " "default leader key is backslash (\). Now change to SPC
+
+set undofile
+set undodir=<neovim_config_path>/undodir
  
 " KEY BINDING CONFIGURATION
 " assign key binding to leader key as prefix
