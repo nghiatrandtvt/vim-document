@@ -30,6 +30,7 @@ Plug 'preservim/nerdcommenter' "comment/uncomment, <SPC>-cc, <SPC>-cu
  
 Plug 'neovim/nvim-lspconfig' "go to definition, go to define, auto import. Need to install clangd if using for c/c++, pyright for python
                              "see lsp section in vim cheatsheet to know how to use
+Plug 'nvimdev/lspsaga.nvim' "UI for lsp
  
 Plug 'hrsh7th/nvim-cmp'        " main plugin for autocomplete
 Plug 'hrsh7th/cmp-nvim-lsp'    " fetch data from nvim-lspconfig plugin
@@ -169,12 +170,26 @@ require'lspconfig'.clangd.setup{ capabilities = capabilities }
 require'lspconfig'.pyright.setup{ capabilities = capabilities }
 require'lspconfig'.bashls.setup{}
 
+require("lspsaga").setup({
+  ui = {
+    border = "rounded",
+  },
+  symbol_in_winbar = {
+    enable = true,  -- Hiển thị ký hiệu LSP trên thanh tiêu đề
+  }
+
 local opts = { noremap=true, silent=true }
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-vim.keymap.set('n', '<leader>i', vim.lsp.buf.code_action, opts)
+vim.keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts)
+vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
+vim.keymap.set("n", "<leader>cr", "<cmd>Lspsaga rename<CR>", opts)
+vim.keymap.set("n", "<leader>ch", "<cmd>Lspsaga hover_doc<CR>", opts)
+vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
+vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+--vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+--vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+--vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+--vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+--vim.keymap.set('n', '<leader>i', vim.lsp.buf.code_action, opts)
 
 -- TELESCOPE CONFIGURATION AND KEYBINDING
 require('telescope').setup{
