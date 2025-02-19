@@ -275,4 +275,4 @@ function! OpenFileAtCursor()
         echo "No such file: " . l:filepath
     endif
 endfunction
-nnoremap gx :call OpenFileAtCursor()<CR>
+nnoremap <leader>o :call OpenFileAtCursor()<CR>
