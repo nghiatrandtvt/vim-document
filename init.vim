@@ -38,8 +38,6 @@ Plug 'hrsh7th/cmp-buffer'      " fetch data from current buffer
 Plug 'hrsh7th/cmp-cmdline'     " autocomplete for command line 
 Plug 'L3MON4D3/LuaSnip'        " snippet support
 
-Plug 'tyru/open-browser.vim' "open url from neovim w/o copy the link to browser
-
 Plug 'mbbill/undotree' "show history of file
 
 Plug 'sindrets/winshift.nvim' "to swap window
