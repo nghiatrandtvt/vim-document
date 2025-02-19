@@ -257,3 +257,13 @@ vim.api.nvim_create_autocmd("FileType", {
 EOF
 
 highlight TelescopeSelection guibg=#800080 "telescope
+
+function! OpenFileAtCursor()
+    let l:filepath = expand('<cfile>')
+    if filereadable(l:filepath)
+        execute 'tabedit ' . l:filepath  "open file with new tab
+    else
+        echo "No such file: " . l:filepath
+    endif
+endfunction
+nnoremap gx :call OpenFileAtCursor()<CR>
