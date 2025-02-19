@@ -41,6 +41,8 @@ Plug 'L3MON4D3/LuaSnip'        " snippet support
 Plug 'mbbill/undotree' "show history of file
 
 Plug 'sindrets/winshift.nvim' "to swap window
+
+Plug 'ellisonleao/glow.nvim' "markdown
 call plug#end()
  
 " THEME
@@ -161,6 +163,13 @@ cnoremap <expr> <Down> wildmenumode() ? "\<C-n>" : "\<Down>"
 lua require("cmp-config")
 
 lua << EOF
+require('glow').setup({
+    style = 'dark',
+    width = 100,
+    height = 30,
+    border = true,
+})
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
  
 require'lspconfig'.clangd.setup{ capabilities = capabilities }
