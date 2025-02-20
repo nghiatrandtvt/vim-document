@@ -1,4 +1,5 @@
-C-k "using telescope to display all keymaps"
+SPC-tk "using telescope to display all keymaps"
+SPC-tc "using telescope to display all commands"
 
 SPC-r "source .vimrc"
  
