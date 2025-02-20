@@ -72,6 +72,10 @@ autocmd BufEnter,TermOpen,BufRead term://* setlocal nonumber norelativenumber "n
 autocmd TermOpen,BufRead term://* setlocal winhighlight=Normal:TermNormal
 highlight TermNormal guibg=#000000
 
+" change background for nerdtree directory window
+autocmd FileType nerdtree setlocal winhighlight=Normal:NERDTreeBg
+highlight NERDTreeBg guibg=#000000
+
 set wildmode=longest:full,full "in COMMAND mode, when tab it will display long list of command
 set list
 set listchars=tab:→\ ,trail:·,extends:>,precedes:<,nbsp:·,eol:↲
