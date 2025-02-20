@@ -9,10 +9,7 @@ SPC-l "move the current window to right"
 SPC-j "move the current window down"
 SPC-k "move the current window up"
  
-SPC-H "swap current window with the left one"
-SPC-L "swap current window with the right one"
-SPC-J "swap current window with the below one"
-SPC-K "swap current window with the upper one"
+SPC-x "swap current window with the choosen one. Using WinShift"
  
 j "from command mode to move cursor to new below line w/o swith to insert mode"
 ------------------- END MOVING -------------------
