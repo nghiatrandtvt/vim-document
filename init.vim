@@ -166,6 +166,31 @@ let g:NERDTreeWinSize = 40 "NERD window size
 " use up/down arrow in wild mode (command mode when press TAB)
 cnoremap <expr> <Up> wildmenumode() ? "\<C-p>" : "\<Up>"
 cnoremap <expr> <Down> wildmenumode() ? "\<C-n>" : "\<Down>"
+
+" open file at cursor
+function! OpenFileAtCursor()
+    let l:filepath = expand('<cfile>')
+
+    if !isdirectory(l:filepath) && !filereadable(l:filepath)
+        let l:filepath = expand('%:p:h') . '/' . l:filepath
+    endif
+
+    if filereadable(l:filepath)
+        execute 'tabedit ' . fnameescape(l:filepath)
+    else
+        echo "No such file: " . l:filepath
+    endif
+endfunction
+
+"function! OpenFileAtCursor()
+"    let l:filepath = expand('<cfile>')
+"    if filereadable(l:filepath)
+"        execute 'tabedit ' . l:filepath  "open file with new tab
+"    else
+"        echo "No such file: " . l:filepath
+"    endif
+"endfunction
+nnoremap <leader>o :call OpenFileAtCursor()<CR>
  
 " LSP CONFIGURATION and KEYBINDING
 " use capabilities for auto complete in combination with nvim cmp
@@ -305,13 +330,3 @@ vim.api.nvim_create_autocmd("FileType", {
 EOF
 
 highlight TelescopeSelection guibg=#800080 "telescope
-
-function! OpenFileAtCursor()
-    let l:filepath = expand('<cfile>')
-    if filereadable(l:filepath)
-        execute 'tabedit ' . l:filepath  "open file with new tab
-    else
-        echo "No such file: " . l:filepath
-    endif
-endfunction
-nnoremap <leader>o :call OpenFileAtCursor()<CR>
