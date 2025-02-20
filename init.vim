@@ -43,6 +43,8 @@ Plug 'sindrets/winshift.nvim' "to swap window
 Plug 'ellisonleao/glow.nvim' "markdown
 
 Plug 'mhinz/vim-startify' "session management
+
+Plug 'nvim-lualine/lualine.nvim' "status bar display
 call plug#end()
 
 nnoremap <leader>tk :Telescope keymaps<CR>
@@ -174,6 +176,26 @@ lua << EOF
 vim.api.nvim_set_keymap('n', '<leader>tt', ':tabnew | terminal<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>tv', ':vsplit | terminal<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>th', ':split | terminal<CR>', { noremap = true, silent = true })
+
+-- lualine configuration
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'powerline_dark',
+    section_separators = { left = '', right = '' },
+    component_separators = { left = '', right = '' }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {
+        {'branch', icon = {'',align='left', color={fg='yellow', gui = 'bold'}}}
+    },
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  }
+}
 
 require('glow').setup({
     style = 'dark',
