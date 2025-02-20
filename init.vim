@@ -43,6 +43,8 @@ Plug 'mbbill/undotree' "show history of file
 Plug 'sindrets/winshift.nvim' "to swap window
 
 Plug 'ellisonleao/glow.nvim' "markdown
+
+Plug 'mhinz/vim-startify' "session management
 call plug#end()
  
 " THEME
