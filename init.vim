@@ -107,7 +107,7 @@ nnoremap <silent> <leader>x :WinShift swap<CR>
 " BUFFER KEYBINDING
 " next buffer/select buffer/delete buffer
 nnoremap <silent> <leader>bn :bnext<CR>
-nnoremap <leader>bs :ls<CR>:buffer
+nnoremap <leader>bs :Telescope buffers<CR>
 nnoremap <leader>bd :ls<CR>:bd!
  
 " TAB KEYBINDING
