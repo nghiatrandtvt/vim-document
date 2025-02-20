@@ -1,3 +1,5 @@
+C-k "using telescope to display all keymaps"
+
 SPC-r "source .vimrc"
  
 -------------------- MOVING --------------------
