@@ -88,6 +88,10 @@ s "open file in vertical"
  
 --------------- TERMINAL -----------------------
 Ctrl-c "exit editor from terminal to back to NORMAL mode. Equivalent to ESC of normal editor. Make sure you're in TERMINAL mode, not NORMAL mode"
+
+SPC-th "open terminal in horizontal"
+SPC-tv "open terminal in vertical"
+SPC-tt "open terminal in new tab"
 -------------- END TERMINAL --------------------
 
 ------------- GIT (USING GITSIGNS and TELESCOPE) ----------------
