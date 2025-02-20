@@ -11,8 +11,6 @@ Plug 'nvim-lua/plenary.nvim' "need for telescope
 Plug 'nvim-telescope/telescope.nvim' "show commit history for repo, show commit history for current buffer
                                      "see telescope section in vim cheatsheet to know how to use
  
-Plug 'itchyny/lightline.vim' "file display information, mode in status bar
- 
 Plug 'lewis6991/gitsigns.nvim' "git blame, git diff
                                "see gitsigns section in vim cheatsheet to know
                                "how to use
