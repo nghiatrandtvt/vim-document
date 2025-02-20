@@ -66,7 +66,12 @@ syntax on "enable syntax
 filetype plugin indent on "automatically detect filetype, enable correspoding plugin and indent base on filetype
  
 set number "display line number
+
+" disable line number and set background color for specific buffer such as terminal buffer
 autocmd BufEnter,TermOpen,BufRead term://* setlocal nonumber norelativenumber "not display line number for some specific buffers such as terminal
+autocmd TermOpen,BufRead term://* setlocal winhighlight=Normal:TermNormal
+highlight TermNormal guibg=#000000
+
 set wildmode=longest:full,full "in COMMAND mode, when tab it will display long list of command
 set list
 set listchars=tab:→\ ,trail:·,extends:>,precedes:<,nbsp:·,eol:↲
