@@ -33,8 +33,9 @@ C-w-= "back to original status before do fullscreen"
  
 --------------- BUFFER -----------------
 SPC-bn "next buffer"
-SPC-bs "list buffer and enter number of buffer to active"
-SPC-bd "list buffer then delete the selected one"
+SPC-bs "using telescope list buffer and use ENTER/C-v/C-x/C-t to open buffer to coressponding window"
+SPC-bs "using telescope list buffer and use M-d to delete choosen buffer"
+SPC-bd "list buffer then delete the selected ones even though it is not saved yet"
 
 :bd "buffer delete - close current buffer"
 :bd <n> "buffer delete - close buffer n-th"
