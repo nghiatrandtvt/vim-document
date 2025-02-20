@@ -46,6 +46,8 @@ Plug 'ellisonleao/glow.nvim' "markdown
 
 Plug 'mhinz/vim-startify' "session management
 call plug#end()
+
+nnoremap <C-k> :Telescope keymaps<CR>
  
 " THEME
 colorscheme dracula 
