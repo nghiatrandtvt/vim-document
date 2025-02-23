@@ -96,6 +96,9 @@ let mapleader=" " "default leader key is backslash (\). Now change to SPC
 
 set undofile
 set undodir=<neovim_config_path>/undodir
+
+set autoread
+autocmd FocusGained,BufEnter * checktime
  
 " KEY BINDING CONFIGURATION
 " assign key binding to leader key as prefix
