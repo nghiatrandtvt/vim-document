@@ -200,3 +200,4 @@ gx "leave the cursor on the link and type gx to open URL"
 
 C-G "to display file name and number of line of fine"
 % "jump to close/open bracket"
+:set cuc "display column at the cursor"
