@@ -185,14 +185,6 @@ function! OpenFileAtCursor()
     endif
 endfunction
 
-"function! OpenFileAtCursor()
-"    let l:filepath = expand('<cfile>')
-"    if filereadable(l:filepath)
-"        execute 'tabedit ' . l:filepath  "open file with new tab
-"    else
-"        echo "No such file: " . l:filepath
-"    endif
-"endfunction
 nnoremap <leader>o :call OpenFileAtCursor()<CR>
  
 " LSP CONFIGURATION and KEYBINDING
@@ -202,53 +194,21 @@ nnoremap <leader>o :call OpenFileAtCursor()<CR>
 " bash language server. Need to install bash language server and add to PATH
 " some of them are using NPM to install, so need nodejs to be installed ahead
 " load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
-lua require("cmp-config")
-
 lua << EOF
-vim.api.nvim_set_keymap('n', '<leader>tt', ':tabnew | terminal<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>tv', ':vsplit | terminal<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>th', ':split | terminal<CR>', { noremap = true, silent = true })
-
--- lualine configuration
-require('lualine').setup {
-  options = {
-    icons_enabled = true,
-    theme = 'powerline_dark',
-    section_separators = { left = '', right = '' },
-    component_separators = { left = '', right = '' }
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {
-        {'branch', icon = {'',align='left', color={fg='yellow', gui = 'bold'}}}
-    },
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  }
-}
-
-require('glow').setup({
-    style = 'dark',
-    width = 100,
-    height = 30,
-    border = true,
-})
+require("cmp-config")
+require('terminal-keybinding')
+require('telescope-config')
+require('lualine-config')
+require('glow-config')
+require('lspsaga-config')
+require('gitsigns-config')
+require('jdtls-config')
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
  
 require'lspconfig'.clangd.setup{ capabilities = capabilities }
 require'lspconfig'.pyright.setup{ capabilities = capabilities }
 require'lspconfig'.bashls.setup{}
-
-require("lspsaga").setup({
-  ui = {
-    border = "rounded",
-  },
-  symbol_in_winbar = {
-    enable = true,
-  }
 
 local opts = { noremap=true, silent=true }
 --vim.keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts)
@@ -263,73 +223,11 @@ vim.keymap.set("n", 'gr', require("telescope.builtin").lsp_references, { noremap
 --vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 --vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
 --vim.keymap.set('n', '<leader>i', vim.lsp.buf.code_action, opts)
-
--- TELESCOPE CONFIGURATION AND KEYBINDING
-require('telescope').setup{
-  defaults = {
-    prompt_prefix = "🔍 ",
-    selection_caret = "➜ ",
-	vimgrep_arguments = {
-	  'ag', '--nocolor', '--noheading', '--numbers', '--column'
-	}
-  }
-}
-
 -- key binding to show commit history of git repo
 -- key binding to show commit history of current buffer
 vim.api.nvim_set_keymap('n', '<leader>gh', ":Telescope git_bcommits<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>gc', ":Telescope git_commits<CR>", { noremap = true, silent = true })
  
--- GITSIGNS CONFIGURATION and KEYBINDING
-require('gitsigns').setup {
-  signs = {
-    add          = { text = '│' },
-    change       = { text = '│' },
-    delete       = { text = '_' },
-    topdelete    = { text = '‾' },
-    changedelete = { text = '~' },
-  },
-  signcolumn = true,
-  numhl      = false,
-  linehl     = false,
-  current_line_blame = true, -- enable display virtual git blame.
-  word_diff  = false,
- 
-  on_attach = function(bufnr)
-    local gs = package.loaded.gitsigns
- 
-    -- Keymaps
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', ']c', '<cmd>lua require"gitsigns".next_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '[c', '<cmd>lua require"gitsigns".prev_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>hs', '<cmd>lua require"gitsigns".stage_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>hr', '<cmd>lua require"gitsigns".reset_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>hp', '<cmd>lua require"gitsigns".preview_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gb', '<cmd>lua require"gitsigns".blame_line{ full = true }<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gd', '<cmd>lua require"gitsigns".diffthis()<CR>', { noremap = true, silent = true })
-  end
-}
-
--- Java with lsp
-local function setup_jdtls()
-  local jdtls = require('jdtls')
-  local config = {
-    cmd = { "jdtls" }, -- can use full path to jdtls. If only jdtls, need to set PATH
-    root_dir = vim.fn.getcwd(),
-    settings = {
-      java = {
-        home = "<JAVA_HOME>",
-      },
-    },
-  }
-  jdtls.start_or_attach(config)
-end
-
--- run jdtls when open Java
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "java",
-  callback = setup_jdtls,
-})
--- end Java with lsp
 EOF
 
 highlight TelescopeSelection guibg=#800080 "telescope
