@@ -197,3 +197,5 @@ d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
 gx "leave the cursor on the link and type gx to open URL"
 <SPC>-o "to open local file. Leave cursor at the file"
 ------------- END OPEN BROWSER -----------------
+
+C-G "to display file name and number of line of fine"
