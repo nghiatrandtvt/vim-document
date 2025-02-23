@@ -170,6 +170,12 @@ let g:NERDTreeWinSize = 40 "NERD window size
 cnoremap <expr> <Up> wildmenumode() ? "\<C-p>" : "\<Up>"
 cnoremap <expr> <Down> wildmenumode() ? "\<C-n>" : "\<Down>"
 
+" file name copy
+" absolutely path/ relative path/ filename only
+nnoremap <leader>fa :let @+=expand('%:p')<CR>
+nnoremap <leader>fr :let @+=expand('%')<CR>
+nnoremap <leader>fn :let @+=expand('%:t')<CR>
+
 " open file at cursor
 function! OpenFileAtCursor()
     let l:filepath = expand('<cfile>')
