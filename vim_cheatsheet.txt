@@ -199,3 +199,4 @@ gx "leave the cursor on the link and type gx to open URL"
 ------------- END OPEN BROWSER -----------------
 
 C-G "to display file name and number of line of fine"
+% "jump to close/open bracket"
