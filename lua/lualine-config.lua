@@ -1,3 +1,7 @@
+require("nvim-web-devicons").setup {
+  default = true,
+}
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
