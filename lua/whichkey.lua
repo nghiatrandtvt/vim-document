@@ -57,5 +57,3 @@ wk.add({
   { "<leader>gb", "<cmd>Telescope git_bcommits<CR>", desc = "show-file-commits" },
   { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "show-repo-commits" },
 })
-nnoremap <leader>tk :Telescope keymaps<CR>
-nnoremap <leader>tc :Telescope commands<CR>
