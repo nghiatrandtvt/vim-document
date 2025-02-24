@@ -217,6 +217,7 @@ set tabline=%!MyTabLine()
 " some of them are using NPM to install, so need nodejs to be installed ahead
 " load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
 lua << EOF
+require("whichkey")
 require("cmp-config")
 require('telescope-config')
 require('lualine-config')
