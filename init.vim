@@ -45,6 +45,8 @@ Plug 'ellisonleao/glow.nvim' "markdown
 Plug 'mhinz/vim-startify' "session management
 
 Plug 'nvim-lualine/lualine.nvim' "status bar display
+
+Plug 'nvim-tree/nvim-web-devicons' "icon
 call plug#end()
  
 " THEME
@@ -155,6 +157,7 @@ set tabline=%!MyTabLine()
 " some of them are using NPM to install, so need nodejs to be installed ahead
 " load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
 lua << EOF
+require('nvim-web-devicons-config')
 require('whichkey')
 require("cmp-config")
 require('telescope-config')
