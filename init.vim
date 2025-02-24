@@ -130,7 +130,6 @@ function! OpenFileAtCursor()
         echo "No such file: " . l:filepath
     endif
 endfunction
-nnoremap <leader>o :call OpenFileAtCursor()<CR>
 
 " tab display
 function! MyTabLine()
@@ -157,6 +156,8 @@ set tabline=%!MyTabLine()
 " some of them are using NPM to install, so need nodejs to be installed ahead
 " load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
 lua << EOF
+vim.api.nvim_set_keymap("n", "<leader>o", ":call OpenFileAtCursor()<CR>", { noremap = true, silent = true, desc = "open-file-at-cursor" })
+
 require('nvim-web-devicons-config')
 require('whichkey')
 require("cmp-config")
