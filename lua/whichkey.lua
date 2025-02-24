@@ -54,6 +54,6 @@ wk.add({
   { "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<cr>", desc = "code diagnostics" },
   
   { "<leader>g", group = "git-action" },
-  { "<leader>gb", "<cmd>Telescope git_bcommits<CR>", desc = "show-file-commits" },
+  { "<leader>gh", "<cmd>Telescope git_bcommits<CR>", desc = "show-file-commits" },
   { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "show-repo-commits" },
 })
