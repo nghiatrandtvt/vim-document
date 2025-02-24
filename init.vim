@@ -218,7 +218,6 @@ set tabline=%!MyTabLine()
 " load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
 lua << EOF
 require("cmp-config")
-require('terminal-keybinding')
 require('telescope-config')
 require('lualine-config')
 require('glow-config')
