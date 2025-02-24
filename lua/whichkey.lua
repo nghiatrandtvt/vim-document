@@ -2,10 +2,10 @@ local wk = require("which-key")
 wk.add({
   { "<leader>r", ":source $MYVIMRC<CR>", desc = "source-init-vim", remap = false },
   
-  { "<leader>h", ":wincmd h<CR>", desc = "move-wd-left", remap = false },
-  { "<leader>j", ":wincmd j<CR>", desc = "move-wd-down", remap = false },
-  { "<leader>k", ":wincmd k<CR>", desc = "move-wd-up", remap = false },
-  { "<leader>l", ":wincmd l<CR>", desc = "move-wd-right", remap = false },
+  { "<leader><Left>", ":wincmd h<CR>", desc = "move-wd-left", remap = false },
+  { "<leader><Down>", ":wincmd j<CR>", desc = "move-wd-down", remap = false },
+  { "<leader><Up>", ":wincmd k<CR>", desc = "move-wd-up", remap = false },
+  { "<leader><Right>", ":wincmd l<CR>", desc = "move-wd-right", remap = false },
   
   { "<leader>b", group = "buffers" },
   { "<leader>bs", "<cmd>Telescope buffers<cr>", desc = "select-buffer" },
