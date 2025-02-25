@@ -52,6 +52,7 @@ wk.add({
   { "<leader>ch", "<cmd>Lspsaga hover_doc<CR>", desc = "code hover" },
   { "<leader>ca", "<cmd>Lspsaga code_action<CR>", desc = "code action" },
   { "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<cr>", desc = "code diagnostics" },
+  { "<leader>cs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "code list symbol" },
   
   { "<leader>g", group = "git-action" },
   { "<leader>gl", "<cmd>Telescope git_bcommits<CR>", desc = "show-file-commits" },
