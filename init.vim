@@ -47,6 +47,8 @@ Plug 'mhinz/vim-startify' "session management
 Plug 'nvim-lualine/lualine.nvim' "status bar display
 
 Plug 'nvim-tree/nvim-web-devicons' "icon
+
+Plug 'windwp/nvim-autopairs' "auto pair
 call plug#end()
  
 " THEME
