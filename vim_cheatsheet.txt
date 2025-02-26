@@ -191,6 +191,9 @@ d<n>w "delete <n> words include current word"
 di{ "delete wors inner {"
 di[ |delete words inner ["
 d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
+
+C-u "delete from cursor to beginning of line INSERT mode"
+C-k "delete from cursor to end of line INSERT mode"
 -------------- END DELETE ---------------------
 
 --------------- OPEN BROWSER -------------------
