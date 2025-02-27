@@ -108,6 +108,7 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <leader>p "+p
 nnoremap <leader>do :NERDTree 
 nnoremap <leader>bd :ls<CR>:bd!
+inoremap <C-d> <Esc>ddi
 
 " command alias 
 " open nerdtree in combination with new tab
