@@ -1,7 +1,5 @@
 local wk = require("which-key")
 wk.add({
-  { "<leader>r", ":source $MYVIMRC<CR>", desc = "source-init-vim", remap = false },
-  
   { "<leader><Left>", ":wincmd h<CR>", desc = "move-wd-left", remap = false },
   { "<leader><Down>", ":wincmd j<CR>", desc = "move-wd-down", remap = false },
   { "<leader><Up>", ":wincmd k<CR>", desc = "move-wd-up", remap = false },
