@@ -106,11 +106,15 @@ autocmd FocusGained,BufEnter * checktime
 " exit from terminal mode
 tnoremap <Esc> <C-\><C-n>
 
-" paste
-nnoremap <leader>p "+p
 nnoremap <leader>do :NERDTree 
 nnoremap <leader>bd :ls<CR>:bd!
+nnoremap <leader>r :source $MYVIMRC<CR>
+
 inoremap <C-d> <Esc>ddi
+inoremap <C-c> <Esc>^y$i
+nnoremap <C-c> ^y$
+nnoremap <C-v> "+p
+inoremap <C-v> <Esc>"+pi
 
 " command alias 
 " open nerdtree in combination with new tab
