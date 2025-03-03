@@ -53,6 +53,6 @@ wk.add({
   { "<leader>cs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "code list symbol" },
   
   { "<leader>g", group = "git-action" },
-  { "<leader>gl", "<cmd>Telescope git_bcommits<CR>", desc = "show-file-commits" },
-  { "<leader>gh", "<cmd>Telescope git_commits<CR>", desc = "show-repo-commits" },
+  { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "show-file-commits" },
+  { "<leader>gl", "<cmd>Telescope git_commits<CR>", desc = "show-repo-commits" },
 })
