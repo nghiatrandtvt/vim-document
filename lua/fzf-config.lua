@@ -1,5 +1,3 @@
-
-
 vim.keymap.set("n", "<leader>sB", function()
   local full_word = vim.fn.expand("<cword>")
   local word = full_word:match("^[^/]+") or full_word
