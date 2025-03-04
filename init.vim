@@ -49,6 +49,8 @@ Plug 'nvim-lualine/lualine.nvim' "status bar display
 Plug 'nvim-tree/nvim-web-devicons' "icon
 
 Plug 'windwp/nvim-autopairs' "auto pair
+
+Plug 'tpope/vim-surround'
 call plug#end()
  
 " THEME
