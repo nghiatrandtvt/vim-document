@@ -178,6 +178,7 @@ require('glow-config')
 require('lspsaga-config')
 require('gitsigns-config')
 require('jdtls-config')
+require('fzf-config')
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require'lspconfig'.clangd.setup{ capabilities = capabilities }
