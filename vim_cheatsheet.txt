@@ -93,8 +93,6 @@ Ctrl-c "exit editor from terminal to back to NORMAL mode. Equivalent to ESC of n
 SPC-th "open terminal in horizontal"
 SPC-tv "open terminal in vertical"
 SPC-tt "open terminal in new tab"
-
-C-V "paste to search box"
 -------------- END TERMINAL --------------------
 
 ------------- GIT (USING GITSIGNS and TELESCOPE) ----------------
@@ -118,6 +116,8 @@ SPC-sua "search string under cursor in current directory" (Use Telescope)
 :copen "open quickfix list after vimgrep"
 :noh "to clear search highlight"
 :cexpr [] "clear search quickfix list"
+
+C-V "paste to search box"
 ---------------- END SEARCH -----------------
  
 --------------- LSP -----------------
@@ -216,7 +216,8 @@ ds[ "delete [ and its closed ]. Using vim surround plugin"
 
 --------------- OPEN BROWSER -------------------
 gx "leave the cursor on the link and type gx to open URL"
-<SPC>-o "to open local file. Leave cursor at the file"
+<SPC>-uf "open file at the cursor"
+<SPC>-ud "open dir at the cursor"
 ------------- END OPEN BROWSER -----------------
 
 C-G "to display file name and number of line of fine"
