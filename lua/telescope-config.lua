@@ -16,3 +16,11 @@ vim.api.nvim_create_autocmd("User", {
 	vim.wo.cursorline = true
   end
 })
+
+vim.keymap.set("n", "<leader>sut", function()
+  local full_word = vim.fn.expand("<cword>")
+  local word = full_word:match("^[^/]+") or full_word
+  require("telescope.builtin").live_grep({
+    default_text = word,
+  })
+end, { desc = "telescope-search-under-cursor-current-dir" })
