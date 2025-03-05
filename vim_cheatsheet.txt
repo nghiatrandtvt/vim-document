@@ -7,10 +7,10 @@ SPC-r "source .vimrc"
 C-w-H "move all horizontal windows to verical windows"
 C-w-K "move all vertical windows to horizontal windows"
  
-SPC-h "move current window to left"
-SPC-l "move the current window to right"
-SPC-j "move the current window down"
-SPC-k "move the current window up"
+SPC-Left "move current window to left"
+SPC-Right "move the current window to right"
+SPC-Down "move the current window down"
+SPC-Up "move the current window up"
  
 SPC-x "swap current window with the choosen one. Using WinShift"
  
