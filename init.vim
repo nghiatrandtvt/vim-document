@@ -142,6 +142,19 @@ function! OpenFileAtCursor()
     endif
 endfunction
 
+function! GotoDirAtCursor()
+    let l:filepath = expand('<cfile>')
+    if !isdirectory(l:filepath) && !filereadable(l:filepath)
+        let l:filepath = expand('%:p:h') . '/' . l:filepath
+    endif
+    if filereadable(l:filepath)
+        let l:dirpath = fnamemodify(l:filepath, ':h')
+        execute 'tabnew | terminal cd ' . fnameescape(l:dirpath) . ' && ' . $SHELL
+    else
+        echo "No such file: " . l:filepath
+    endif
+endfunction
+
 " tab display
 function! MyTabLine()
     let s = ''
@@ -167,7 +180,8 @@ set tabline=%!MyTabLine()
 " some of them are using NPM to install, so need nodejs to be installed ahead
 " load cmp config. Default is from .config/nvim/lua/cmp-config.lua 
 lua << EOF
-vim.api.nvim_set_keymap("n", "<leader>o", ":call OpenFileAtCursor()<CR>", { noremap = true, silent = true, desc = "open-file-at-cursor" })
+vim.api.nvim_set_keymap("n", "<leader>uf", ":call OpenFileAtCursor()<CR>", { noremap = true, silent = true, desc = "open-file-at-cursor" })
+vim.api.nvim_set_keymap("n", "<leader>ud", ":call GotoDirAtCursor()<CR>", { noremap = true, silent = true, desc = "goto-dir-at-cursor" })
 
 require('nvim-web-devicons-config')
 require('whichkey')
