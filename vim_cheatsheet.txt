@@ -106,6 +106,15 @@ SPC-gd "git diff" (Using git signs)
 SPC-sf "search file in current directory" (Use FZF)
 SPC-ss "search string in current file" (Use FZF)
 SPC-sa "search string in current directory" (Use Telescope)
+
+SPC-sus "search string under cursor in current file" (Use FZF)
+SPC-sut "search string under cursor in all buffers" (Use FZF)
+SPC-sua "search string under cursor in current directory" (Use Telescope)
+
+:vimgrep /string_to_search/gj **/*.<file_type> "search string with <file_type> only from current directory"
+:copen "open quickfix list after vimgrep"
+:noh "to clear search highlight"
+:cexpr [] "clear search quickfix list"
 ---------------- END SEARCH -----------------
  
 --------------- LSP -----------------
