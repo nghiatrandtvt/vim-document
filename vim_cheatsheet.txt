@@ -105,6 +105,7 @@ SPC-gd "git diff" (Using git signs)
 ------------------ SEARCH -------------------
 SPC-sf "search file in current directory" (Use FZF)
 SPC-ss "search string in current file" (Use FZF)
+SPC-st "search string in all buffers" (Use FZF)
 SPC-sa "search string in current directory" (Use Telescope)
 
 SPC-sus "search string under cursor in current file" (Use FZF)
