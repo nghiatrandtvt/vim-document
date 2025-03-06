@@ -78,6 +78,7 @@ SPC-df "nerdtreefind"
 SPC-dt "nerdtreetoggle"
 SPC-do "nerdtree"
 SPC-dj "nerdtree focus - jump to nerdtree dir"
+SPC-dr "nerdtree refresh"
 
 m "open nerdtree menu"
 o "collapse/uncollapse a specific sub directory"
