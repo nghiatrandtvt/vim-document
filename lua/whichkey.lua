@@ -38,6 +38,7 @@ wk.add({
   { "<leader>dt", "<cmd>NERDTreeToggle<cr>", desc = "directory-toggle" },
   { "<leader>df", "<cmd>NERDTreeFind<cr>", desc = "directory-find" },
   { "<leader>dj", "<cmd>NERDTreeFocus<cr>", desc = "jump-to-dir-window" },
+  { "<leader>dr", "<cmd>NERDTreeRefreshRoot<cr>", desc = "refresh-dir" },
   
   { "<leader>f", group = "file-copy" },
   { "<leader>fa", "<cmd>let @+=expand('%:p')<cr>", desc = "copy-absolutely-file-path" },
