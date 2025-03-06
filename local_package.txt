@@ -3,3 +3,4 @@ pyright "npm install --prefix <localtion_pyright_will_be_installed> pyright"
 npm-global/bash-language-server "npm install --prefix <localtion_bashls_will_be_installed> bash-language-server"
 eclipse/jdt-language-server "https://download.eclipse.org/jdtls/milestones/1.41.0/"
 ag "search engine for telescope. Need to install ag first"
+https://www.nerdfonts.com/font-downloads .Then copy and unzip inside ~/.local/share/fonts. Then run fc-cache-64 -fv to install fonts
