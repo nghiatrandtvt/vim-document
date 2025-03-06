@@ -37,7 +37,7 @@ wk.add({
   { "<leader>d", group = "directory" },
   { "<leader>dt", "<cmd>NERDTreeToggle<cr>", desc = "directory-toggle" },
   { "<leader>df", "<cmd>NERDTreeFind<cr>", desc = "directory-find" },
-  { "<leader>do", "<cmd>NERDTree ", desc = "directory-open" },
+  { "<leader>dj", "<cmd>NERDTreeFocus<cr>", desc = "jump-to-dir-window" },
   
   { "<leader>f", group = "file-copy" },
   { "<leader>fa", "<cmd>let @+=expand('%:p')<cr>", desc = "copy-absolutely-file-path" },
