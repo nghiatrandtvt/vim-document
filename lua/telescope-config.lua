@@ -17,10 +17,18 @@ vim.api.nvim_create_autocmd("User", {
   end
 })
 
-vim.keymap.set("n", "<leader>sut", function()
+vim.keymap.set("n", "<leader>sca", function()
   local full_word = vim.fn.expand("<cword>")
   local word = full_word:match("^[^/]+") or full_word
   require("telescope.builtin").live_grep({
     default_text = word,
   })
 end, { desc = "telescope-search-under-cursor-current-dir" })
+
+vim.keymap.set("v", "<leader>sva", function()
+  vim.cmd('normal! "zy')
+  local selected_text = vim.fn.getreg('z')
+  require("telescope.builtin").live_grep({
+    default_text = selected_text,
+  })
+end, { desc = "telescope-search-selected-text-current-dir" })
