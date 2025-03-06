@@ -3,7 +3,6 @@ vim.keymap.set("n", "<leader>scs", function()
   local word = full_word:match("^[^/]+") or full_word
   local fzf_options = "--color=hl:yellow,hl+:cyan --query " .. vim.fn.shellescape(word)
   vim.fn["fzf#vim#buffer_lines"](word, {
-    ["sink"] = "e",
     ["options"] = fzf_options,
   })
 end, { desc = "FzF-search-under-cursor-current-buf" })
@@ -13,7 +12,6 @@ vim.keymap.set("n", "<leader>sct", function()
   local word = full_word:match("^[^/]+") or full_word
   local fzf_options = "--color=hl:yellow,hl+:cyan --query " .. vim.fn.shellescape(word)
   vim.fn["fzf#vim#lines"](word, {
-    ["sink"] = "e",
     ["options"] = fzf_options,
   })
 end, { desc = "FzF-search-under-cursor-all-buf" })
@@ -23,7 +21,6 @@ vim.keymap.set("v", "<leader>svs", function()
   local selected_text = vim.fn.getreg('z')
   local fzf_options = "--color=hl:yellow,hl+:cyan --query " .. vim.fn.shellescape(selected_text)
   vim.fn["fzf#vim#buffer_lines"](selected_text, {
-    ["sink"] = "e",
     ["options"] = fzf_options,
   })
 end, { desc = "FZF-search-selected-text-current-buf" })
@@ -33,7 +30,6 @@ vim.keymap.set("v", "<leader>svt", function()
   local selected_text = vim.fn.getreg('z')
   local fzf_options = "--color=hl:yellow,hl+:cyan --query " .. vim.fn.shellescape(selected_text)
   vim.fn["fzf#vim#lines"](selected_text, {
-    ["sink"] = "e",
     ["options"] = fzf_options,
   })
 end, { desc = "FZF-search-selected-text-all-buf" })
