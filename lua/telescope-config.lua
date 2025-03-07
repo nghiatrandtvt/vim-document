@@ -25,7 +25,7 @@ vim.keymap.set("n", "<leader>sca", function()
   })
 end, { desc = "telescope-search-under-cursor-current-dir" })
 
-vim.keymap.set("v", "<leader>sva", function()
+vim.keymap.set("v", "<leader>sa", function()
   vim.cmd('normal! "zy')
   local selected_text = vim.fn.getreg('z')
   require("telescope.builtin").live_grep({
