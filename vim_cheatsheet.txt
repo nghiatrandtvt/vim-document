@@ -1,3 +1,5 @@
+:set fileformat=unix "to convert file to unix format"
+
 SPC-tk "using telescope to display all keymaps"
 SPC-tc "using telescope to display all commands"
 
