@@ -195,7 +195,11 @@ require('jdtls-config')
 require('fzf-config')
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-require'lspconfig'.clangd.setup{ capabilities = capabilities }
+require'lspconfig'.clangd.setup{ 
+  capabilities = capabilities,
+  filetypse = { "c", "cpp" },
+  cmd = { "clangd", "--compile-commands-dir=<dir_to_compile_commands.json>" }
+}
 require'lspconfig'.pyright.setup{ capabilities = capabilities }
 require'lspconfig'.bashls.setup{}
 
