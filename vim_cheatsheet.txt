@@ -17,6 +17,9 @@ SPC-Up "move the current window up"
 SPC-x "swap current window with the choosen one. Using WinShift"
  
 j "from command mode to move cursor to new below line w/o swith to insert mode"
+w "move to begining of next word"
+b "move to begining of previous word"
+% "jump to close/open bracket"
 ------------------- END MOVING -------------------
  
 ------------- WINDOW CLOSING ---------------
@@ -230,7 +233,6 @@ gx "leave the cursor on the link and type gx to open URL"
 ------------- END OPEN BROWSER -----------------
 
 C-G "to display file name and number of line of fine"
-% "jump to close/open bracket"
 :set cuc "display column at the cursor"
 
 ------------------- FILE COPY --------------------
