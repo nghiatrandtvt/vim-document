@@ -178,7 +178,7 @@ y0 "copy from cursor (not include current character) to begining of line"
 yi{ "copy words inner {"
 yi[ "copy words inner ["
 
-<C>-c "copy whole line except space. For example "    hello abc   " will copy "hello abc" in both INSERT and NORMAL mode"
+<C>-y "copy whole line except space. For example "    hello abc   " will copy "hello abc" in both INSERT and NORMAL mode"
 ------------------- END COPY -----------------
 
 --------------------- COPY CLIPBOARD -------------------
