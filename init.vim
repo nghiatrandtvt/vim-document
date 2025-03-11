@@ -113,8 +113,8 @@ nnoremap <leader>bd :ls<CR>:bd!
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 inoremap <C-d> <Esc>ddi
-inoremap <C-c> <Esc>^y$i
-nnoremap <C-c> ^y$
+inoremap <C-y> <Esc>^y$i
+nnoremap <C-y> ^y$
 nnoremap <C-v> "+p
 inoremap <C-v> <Esc>"+pi
 
