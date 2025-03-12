@@ -73,11 +73,11 @@ set number "display line number
 " disable line number and set background color for specific buffer such as terminal buffer
 autocmd BufEnter,TermOpen,BufRead term://* setlocal nonumber norelativenumber "not display line number for some specific buffers such as terminal
 autocmd TermOpen,BufRead term://* setlocal winhighlight=Normal:TermNormal
-highlight TermNormal guibg=#000000
+highlight TermNormal guibg=#333333
 
 " change background for nerdtree directory window
 autocmd FileType nerdtree setlocal winhighlight=Normal:NERDTreeBg
-highlight NERDTreeBg guibg=#000000
+highlight NERDTreeBg guibg=#3f3f4e
 
 set wildmode=longest:full,full "in COMMAND mode, when tab it will display long list of command
 set list
@@ -113,8 +113,8 @@ nnoremap <leader>bd :ls<CR>:bd!
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 inoremap <C-d> <Esc>ddi
-inoremap <C-y> <Esc>^y$i
-nnoremap <C-y> ^y$
+inoremap <C-c> <Esc>^y$i
+nnoremap <C-c> ^y$
 nnoremap <C-v> "+p
 inoremap <C-v> <Esc>"+pi
 
