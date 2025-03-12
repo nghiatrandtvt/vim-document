@@ -95,7 +95,7 @@ s "open file in vertical"
 --------------- END NERDTREE ACTION --------------
  
 --------------- TERMINAL -----------------------
-Ctrl-c "exit editor from terminal to back to NORMAL mode. Equivalent to ESC of normal editor. Make sure you're in TERMINAL mode, not NORMAL mode"
+Shift-Esc "exit editor from terminal to back to NORMAL mode. Equivalent to ESC of normal editor. Make sure you're in TERMINAL mode, not NORMAL mode"
 
 SPC-th "open terminal in horizontal"
 SPC-tv "open terminal in vertical"
@@ -178,7 +178,7 @@ y0 "copy from cursor (not include current character) to begining of line"
 yi{ "copy words inner {"
 yi[ "copy words inner ["
 
-<C>-y "copy whole line except space. For example "    hello abc   " will copy "hello abc" in both INSERT and NORMAL mode"
+<C>-c "copy whole line except space. For example "    hello abc   " will copy "hello abc" in both INSERT and NORMAL mode"
 ------------------- END COPY -----------------
 
 --------------------- COPY CLIPBOARD -------------------
