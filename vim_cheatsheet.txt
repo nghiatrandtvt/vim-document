@@ -96,7 +96,7 @@ S "search file"
 C-x "open file in horizontal"
 C-v "open file in vertical"
 C-t "open file in new tab"
---------------- END NERDTREE ACTION --------------
+--------------- END NVIMTREE ACTION --------------
  
 --------------- TERMINAL -----------------------
 Shift-Esc "exit editor from terminal to back to NORMAL mode. Equivalent to ESC of normal editor. Make sure you're in TERMINAL mode, not NORMAL mode"
