@@ -17,6 +17,7 @@ SPC-Up "move the current window up"
 SPC-x "swap current window with the choosen one. Using WinShift"
  
 j "from command mode to move cursor to new below line w/o swith to insert mode"
+
 w "move to begining of next word"
 b "move to begining of previous word"
 % "jump to close/open bracket"
@@ -76,22 +77,25 @@ SPC-t9 "go to tab number 9"
 :tabclose "close current tab"
 --------------- END TAB ACTION -------------------
  
----------------- NERDTREE -----------------
-:Dt <dir> "open directory (NERDTree) with new tab. This is user-defined command, must be capital letter"
+---------------- NVIMTREE -----------------
+:Dt <dir> "open directory (NvimTree) with new tab. This is user-defined command, must be capital letter"
 
-SPC-df "nerdtreefind"
-SPC-dt "nerdtreetoggle"
-SPC-do "nerdtree"
-SPC-dj "nerdtree focus - jump to nerdtree dir"
-SPC-dr "nerdtree refresh"
+SPC-df "nvimtreefind"
+SPC-dt "nvimtreetoggle"
+SPC-do "nvintreeopen"
+SPC-dj "nvimtree focus - jump to nvimtree dir"
+SPC-dr "nvimtree refresh"
+SPC-dc "nvimtree close"
 
-m "open nerdtree menu"
-o "collapse/uncollapse a specific sub directory"
-O "collapse all directories"
-X "uncollapse all directories"
+g? "to see all key mapping"
 
-i "open file in horizontal"
-s "open file in vertical"
+E "expand directory"
+W "collapse directory"
+S "search file"
+
+C-x "open file in horizontal"
+C-v "open file in vertical"
+C-t "open file in new tab"
 --------------- END NERDTREE ACTION --------------
  
 --------------- TERMINAL -----------------------
@@ -103,8 +107,8 @@ SPC-tt "open terminal in new tab"
 -------------- END TERMINAL --------------------
 
 ------------- GIT (USING GITSIGNS and TELESCOPE) ----------------
-SPC-gc "show git commit of repo" (Using telescope)
-SPC-gh "show git history of current buffer or current file" (Using telescope)
+SPC-gl "show git commit of repo" (Using telescope)
+SPC-gf "show git history of current buffer or current file" (Using telescope)
 SPC-gb "show git blame of specific line/statement of current file" (Using gitsigns)
 SPC-gd "git diff" (Using git signs)
 ----------- END GIT ------------------
@@ -200,8 +204,7 @@ yi[ "copy words inner ["
 p "to paste after cursor (line after cursor, not same line with cursor)"
 P "to paste before cursor (line before cursor, not same line with cursor)"
 C-r " "paste from default register in INSERT mode"
-
-C-v "paste INSERT/NORMAL mode"
+C-v "paste INSERT/NORMAL mode
 ----------------- END PASTE --------------------------
 
 -------------------- PASTE CLIPBOARD ----------------------------
@@ -233,6 +236,7 @@ gx "leave the cursor on the link and type gx to open URL"
 ------------- END OPEN BROWSER -----------------
 
 C-G "to display file name and number of line of fine"
+% "jump to close/open bracket"
 :set cuc "display column at the cursor"
 
 ------------------- FILE COPY --------------------
