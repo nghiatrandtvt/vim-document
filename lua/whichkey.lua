@@ -1,5 +1,7 @@
 local wk = require("which-key")
 wk.add({
+  { "<leader>r", ":source $MYVIMRC<CR>", desc = "source-init-vim", remap = false },
+  
   { "<leader><Left>", ":wincmd h<CR>", desc = "move-wd-left", remap = false },
   { "<leader><Down>", ":wincmd j<CR>", desc = "move-wd-down", remap = false },
   { "<leader><Up>", ":wincmd k<CR>", desc = "move-wd-up", remap = false },
@@ -7,7 +9,6 @@ wk.add({
   
   { "<leader>b", group = "buffers" },
   { "<leader>bs", "<cmd>Telescope buffers<cr>", desc = "select-buffer" },
-  { "<leader>bd", "<cmd>ls<cr><cmd>bd!", desc = "delete-buffer" },
   { "<leader>bn", "<cmd>bnext<cr>", desc = "next-buffer" },
   
   { "<leader>t", group = "tab-term-telescope" },
@@ -35,10 +36,11 @@ wk.add({
   { "<leader>sa", "<cmd>Telescope live_grep<cr>", desc = "grep-string-current-dir" },
   
   { "<leader>d", group = "directory" },
-  { "<leader>dt", "<cmd>NERDTreeToggle<cr>", desc = "directory-toggle" },
-  { "<leader>df", "<cmd>NERDTreeFind<cr>", desc = "directory-find" },
-  { "<leader>dj", "<cmd>NERDTreeFocus<cr>", desc = "jump-to-dir-window" },
-  { "<leader>dr", "<cmd>NERDTreeRefreshRoot<cr>", desc = "refresh-dir" },
+  { "<leader>dt", "<cmd>NvimTreeToggle<cr>", desc = "directory-toggle" },
+  { "<leader>df", "<cmd>NvimTreeFindFile<cr>", desc = "directory-find" },
+  { "<leader>dj", "<cmd>NvimTreeFocus<cr>", desc = "jump-to-dir-window" },
+  { "<leader>dj", "<cmd>NvimTreeClose<cr>", desc = "close-dir-window" },
+  { "<leader>dr", "<cmd>NvimTreeRefresh<cr>", desc = "refresh-dir" },
   
   { "<leader>f", group = "file-copy" },
   { "<leader>fa", "<cmd>let @+=expand('%:p')<cr>", desc = "copy-absolutely-file-path" },
