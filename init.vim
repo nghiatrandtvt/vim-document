@@ -104,7 +104,8 @@ autocmd FocusGained,BufEnter * checktime
 " exit from terminal mode
 tnoremap <Esc> <C-\><C-n>
 
-nnoremap <leader>do :NvimTreeOpen
+nnoremap <leader>do :NvimTreeOpen 
+nnoremap <leader>dw :NvimTreeResize 
 nnoremap <leader>bd :ls<CR>:bd!
 nnoremap <leader>r :source $MYVIMRC<CR>
 
