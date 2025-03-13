@@ -86,6 +86,7 @@ SPC-do "nvintreeopen"
 SPC-dj "nvimtree focus - jump to nvimtree dir"
 SPC-dr "nvimtree refresh"
 SPC-dc "nvimtree close"
+SPC-dw "resize"
 
 g? "to see all key mapping"
 
