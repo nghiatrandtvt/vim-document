@@ -104,7 +104,7 @@ autocmd FocusGained,BufEnter * checktime
 " exit from terminal mode
 tnoremap <Esc> <C-\><C-n>
 
-nnoremap <leader>do :NERDTree 
+nnoremap <leader>do :NvimTreeOpen
 nnoremap <leader>bd :ls<CR>:bd!
 nnoremap <leader>r :source $MYVIMRC<CR>
 
@@ -115,8 +115,8 @@ nnoremap <C-v> "+p
 inoremap <C-v> <Esc>"+pi
 
 " command alias 
-" open nerdtree in combination with new tab
-command! -complete=dir -nargs=* Dt tabnew | execute 'NERDTree' <q-args>
+" open nvimtree in combination with new tab
+command! -complete=dir -nargs=* Dt tabnew | execute 'NvimTreeOpen' <q-args>
  
 " use up/down arrow in wild mode (command mode when press TAB)
 cnoremap <expr> <Up> wildmenumode() ? "\<C-p>" : "\<Up>"
