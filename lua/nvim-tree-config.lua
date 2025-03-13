@@ -7,8 +7,10 @@ require("nvim-tree").setup({
   },
   renderer = {
     group_empty = true,
+	highlight_opened_files = "icon",
+	highlight_modified = "icon",
   },
-  filters = {
-    dotfiles = true,
+  modified = {
+    enable = true,
   },
 })
