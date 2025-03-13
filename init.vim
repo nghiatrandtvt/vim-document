@@ -1,8 +1,5 @@
 call plug#begin('~/.local/share/nvim/site/plugged')
-Plug 'preservim/nerdtree' "file and directory management
-                          "see nerdtree section in vim cheatsheet to know how
-                          "to use
- 
+Plug 'nvim-tree/nvim-tree.lua' 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
 Plug 'junegunn/fzf.vim' "search file in directory, grep string from current cmp-buffer
                         "see fzf section in vim cheatsheet to know how to use
@@ -75,9 +72,7 @@ autocmd BufEnter,TermOpen,BufRead term://* setlocal nonumber norelativenumber "n
 autocmd TermOpen,BufRead term://* setlocal winhighlight=Normal:TermNormal
 highlight TermNormal guibg=#333333
 
-" change background for nerdtree directory window
-autocmd FileType nerdtree setlocal winhighlight=Normal:NERDTreeBg
-highlight NERDTreeBg guibg=#3f3f4e
+highlight NvimTreeNormal guibg=#3f3f4e
 
 set wildmode=longest:full,full "in COMMAND mode, when tab it will display long list of command
 set list
@@ -102,6 +97,7 @@ let mapleader=" " "default leader key is backslash (\). Now change to SPC
 set undofile
 set undodir=<neovim_config_path>/undodir
 
+" update file content realtime (for example when change branch or change commit on Git)
 set autoread
 autocmd FocusGained,BufEnter * checktime
  
@@ -121,7 +117,6 @@ inoremap <C-v> <Esc>"+pi
 " command alias 
 " open nerdtree in combination with new tab
 command! -complete=dir -nargs=* Dt tabnew | execute 'NERDTree' <q-args>
-let g:NERDTreeWinSize = 40 "NERD window size
  
 " use up/down arrow in wild mode (command mode when press TAB)
 cnoremap <expr> <Up> wildmenumode() ? "\<C-p>" : "\<Up>"
@@ -183,6 +178,7 @@ lua << EOF
 vim.api.nvim_set_keymap("n", "<leader>uf", ":call OpenFileAtCursor()<CR>", { noremap = true, silent = true, desc = "open-file-at-cursor" })
 vim.api.nvim_set_keymap("n", "<leader>ud", ":call GotoDirAtCursor()<CR>", { noremap = true, silent = true, desc = "goto-dir-at-cursor" })
 
+require('nvim-tree-config')
 require('nvim-web-devicons-config')
 require('whichkey')
 require("cmp-config")
