@@ -44,7 +44,7 @@ wk.add({
   
   { "<leader>f", group = "file-copy" },
   { "<leader>fa", "<cmd>let @+=expand('%:p')<cr>", desc = "copy-absolutely-file-path" },
-  { "<leader>fr", "<cmd>let @+=expand('%')<cr>", desc = "copy-relative-file-path" },
+  { "<leader>fr", "<cmd>let @+=expand('%:h')<cr>", desc = "copy-path-wo-filename" },
   { "<leader>fn", "<cmd>let @+=expand('%:t')<cr>", desc = "copy-file-name-only" },
   
   { "<leader>x", "<cmd>WinShift swap<cr>", desc = "window-swap" },
