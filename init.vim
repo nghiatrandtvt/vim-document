@@ -48,6 +48,8 @@ Plug 'nvim-tree/nvim-web-devicons' "icon
 Plug 'windwp/nvim-autopairs' "auto pair
 
 Plug 'tpope/vim-surround'
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
  
 " THEME
@@ -190,6 +192,7 @@ require('lspsaga-config')
 require('gitsigns-config')
 require('jdtls-config')
 require('fzf-config')
+require('nvim-treesitter-config')
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require'lspconfig'.clangd.setup{ 
