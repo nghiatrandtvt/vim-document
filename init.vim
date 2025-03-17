@@ -142,6 +142,7 @@ endfunction
 
 function! OpenFileWithParh()
     let l:filepath = expand('<cfile>')
+	echo "Opening file: " . l:filepath
 	let l:path = input("Enter file path: ", "", "file")
 	if empty(l:path)
 		echo("No file path provided.")
@@ -159,14 +160,24 @@ endfunction
 
 function! GotoDirAtCursor()
     let l:filepath = expand('<cfile>')
-    if !isdirectory(l:filepath) && !filereadable(l:filepath)
-        let l:filepath = expand('%:p:h') . '/' . l:filepath
-    endif
-    if filereadable(l:filepath)
-        let l:dirpath = fnamemodify(l:filepath, ':h')
-        execute 'tabnew | terminal cd ' . fnameescape(l:dirpath) . ' && ' . $SHELL
+    if isdirectory(l:filepath)
+        echo l:filepath . " existed."
+        let l:dirpath  = l:filepath
+    elseif filereadable(l:filepath)
+        echo l:filepath . " is readable file. Removing the filename."
+        let dirpath = fnamemodify(l:filepath, ':h')
     else
-        echo "No such file: " . l:filepath
+        echo l:filepath . " is not directory nor readable file. Expanding with head of current file."
+        let l:dirpath = expand('%:p:h') . '/' . l:filepath
+        let dirpath = fnamemodify(l:filepath, ':h')
+    endif
+ 
+    if isdirectory(l:dirpath)
+        echo "Jumping to: " . l:dirpath
+        execute 'tabnew | terminal cd ' . fnameescape(l:dirpath) . ' && ' . $SHELL
+        call feedkeys("cd " . l:dirpath . " && " . $SHELL . "\<CR>")
+    else
+        echo "No such file: " . l:dirpath
     endif
 endfunction
 
