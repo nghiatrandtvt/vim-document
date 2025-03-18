@@ -89,6 +89,7 @@ SPC-dc "nvimtree close"
 SPC-dw "resize"
 
 g? "to see all key mapping"
+- "to go up parent dir. Need to stay at the directory which is wanted to go up"
 
 E "expand directory"
 W "collapse directory"
