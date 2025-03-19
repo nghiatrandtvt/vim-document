@@ -31,6 +31,32 @@ vim.keymap.set("n", "<leader>scf", function()
   }, 0)
 end, { desc = "FZF-search-file-under-cursor-current-dir" })
 
+vim.keymap.set("n", "<leader>scF", function()
+  local full_path = vim.fn.expand("<cfile>")
+  if full_path == "" then
+    print("No file path under cursor")
+    return
+  end
+  
+  local filename = full_path:match("[^/]+$") or full_path
+  local search_dir = vim.fn.input("Enter directory: ", vim.fn.getcwd(), "dir")
+  if search_dir == "" then
+    print("No directory specified.")
+    return
+  end
+  
+  if vim.fn.isdirectory(search_dir) == 0 then
+    print("Invalid directory: " .. search_dir)
+    return
+  end
+  
+  local fzf_options = "--color=hl:yellow,hl+:cyan --query " .. vim.fn.shellescape(filename)
+  
+  vim.fn["fzf#vim#files"](search_dir, {
+    options = fzf_options,
+  }, 0)
+end, { desc = "FZF-search-file-under-cursor-with-input-dir" })
+
 vim.keymap.set("v", "<leader>ss", function()
   vim.cmd('normal! "zy')
   local selected_text = vim.fn.getreg('z')
@@ -57,3 +83,24 @@ vim.keymap.set("v", "<leader>sf", function()
     ["options"] = fzf_options,
   }, 0)
 end, { desc = "FZF-search-file-current-dir" })
+
+vim.keymap.set("v", "<leader>sF", function()
+  vim.cmd('normal! "zy')
+  local selected_file = vim.fn.getreg('z')
+  local search_dir = vim.fn.input("Enter directory: ", vim.fn.getcwd(), "dir")
+  if search_dir == "" then
+    print("No directory specified.")
+    return
+  end
+  
+  if vim.fn.isdirectory(search_dir) == 0 then
+    print("Invalid directory: " .. search_dir)
+    return
+  end
+  
+  local fzf_options = "--color=hl:yellow,hl+:cyan --query " .. vim.fn.shellescape(selected_file)
+  
+  vim.fn["fzf#vim#files"](search_dir, {
+    options = fzf_options,
+  }, 0)
+end, { desc = "FZF-search-selected-file-with-input-dir" })
