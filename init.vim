@@ -58,12 +58,6 @@ syntax enable
 set termguicolors
 " END THEME
  
-" CONFIGURE CURSOR DISPLAY FOR INSERT MODE (i means INSERT)
-set guicursor+=i:blinkwait700-blinkoff400-blinkon250
-set guicursor+=i:block
-highlight Cursor guibg=#888888
-" END CURSOR CONFIGURATION
- 
 syntax on "enable syntax
 filetype plugin indent on "automatically detect filetype, enable correspoding plugin and indent base on filetype
  
@@ -103,6 +97,7 @@ set undodir=<neovim_config_path>/undodir
 set autoread
 autocmd FocusGained,BufEnter * checktime
 
+source ~/.config/nvim/cursor-custom.vim
 source ~/.config/nvim/usual-key-mapping.vim
 source ~/.config/nvim/jump-to-file.vim
 source ~/.config/nvim/tabline-custom.vim
