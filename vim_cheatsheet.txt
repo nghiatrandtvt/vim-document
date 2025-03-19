@@ -240,13 +240,16 @@ ds[ "delete [ and its closed ]. Using vim surround plugin"
 
 --------------- OPEN BROWSER -------------------
 gx "leave the cursor on the link and type gx to open URL"
-<SPC>-uf "open file at the cursor"
-<SPC>-ud "open dir at the cursor"
+SPC-jf "open file at cursor"
+SPC-jF "goto file at cursor at pwd"
+SPC-jp "open file at cursor with path"
+SPC-jd "goto dir at cursor"
+
 ------------- END OPEN BROWSER -----------------
 
 C-G "to display file name and number of line of fine"
 % "jump to close/open bracket"
-:set cuc "display column at the cursor"
+:set cuc "display column under the cursor"
 
 ------------------- FILE COPY --------------------
 SPC-fa "copy absolutely current file"
