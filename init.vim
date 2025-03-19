@@ -112,8 +112,11 @@ nnoremap <leader>bd :ls<CR>:bd!
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 inoremap <C-d> <Esc>ddi
+inoremap <C-k> <Esc>d$i
+
 inoremap <C-c> <Esc>^y$i
 nnoremap <C-c> ^y$
+
 nnoremap <C-v> "+p
 inoremap <C-v> <Esc>"+pi
 
@@ -254,6 +257,7 @@ require('gitsigns-config')
 require('jdtls-config')
 require('fzf-config')
 require('nvim-treesitter-config')
+require('open-url-config')
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require'lspconfig'.clangd.setup{ 
