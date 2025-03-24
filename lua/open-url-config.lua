@@ -24,3 +24,22 @@ vim.keymap.set("v", "<leader>ju", function()
   print("Opening: " .. url)
   vim.fn.jobstart({open_cmd, url}, {detach = true})
 end, { desc = "Open-selected-URL-in-browser" })
+
+vim.keymap.set("n", "<leader>jG", function()
+  url = "https://gerrit.ericsson.se"
+ 
+  local open_cmd
+  if vim.fn.has("linux") == 1 then
+    open_cmd = "xdg-open"
+  elseif vim.fn.has("mac") == 1 then
+    open_cmd = "open"
+  elseif vim.fn.has("win32") == 1 then
+    open_cmd = "start"
+  else
+    print("Unsupported OS")
+    return
+  end
+ 
+  print("Opening: " .. url)
+  vim.fn.jobstart({open_cmd, url}, {detach = true})
+end, { desc = "Open-Gerrit-in-browser" })
