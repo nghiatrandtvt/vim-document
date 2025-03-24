@@ -114,7 +114,7 @@ require('jump-to-file-config')
 vim.api.nvim_set_keymap("n", "<leader>jf", ":call OpenFileAtCursor()<CR>", { noremap = true, silent = true, desc = "open-file-at-cursor" })
 vim.api.nvim_set_keymap("n", "<leader>jp", ":call OpenFileWithParh()<CR>", { noremap = true, silent = true, desc = "open-file-at-cursor-with=path" })
 vim.api.nvim_set_keymap("n", "<leader>jd", ":call GotoDirAtCursor()<CR>", { noremap = true, silent = true, desc = "goto-dir-at-cursor" })
-vim.api.nvim_set_keymap("n", "<leader>jF", ":lua OpenFileAtCursorPwd()<CR>", { noremap = true, silent = true, desc = "goto-file-at-cursor-pwd" })
+vim.api.nvim_set_keymap("n", "<leader>jF", ":lua OpenFileAtCursorPwd()<CR>", { noremap = true, silent = true, desc = "goto-file-at-cursor-pwd-only-use-in-terminal" })
 
 require('nvim-tree-config')
 require('nvim-web-devicons-config')
