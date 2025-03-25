@@ -25,8 +25,8 @@ vim.keymap.set("v", "<leader>ju", function()
   vim.fn.jobstart({open_cmd, url}, {detach = true})
 end, { desc = "Open-selected-URL-in-browser" })
 
-vim.keymap.set("n", "<leader>jG", function()
-  url = "https://gerrit.ericsson.se"
+vim.keymap.set("n", "<leader>gO", function()
+  url = "<url>"
  
   local open_cmd
   if vim.fn.has("linux") == 1 then
