@@ -80,7 +80,7 @@ set softtabstop=4 "number of space when tab in insert mode
 set splitbelow "open window in below when :split
 set splitright "open window in right when :vsplit
 
-set colorcolumn=120 "highlight line at column 120
+set colorcolumn=80 "highlight line at column 80
 
 set clipboard=unnamedplus "always copy to clipboard register, not default register as default
                           "it will benefit when paste with SPC-p (alias of "+p) that
