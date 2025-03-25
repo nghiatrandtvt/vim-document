@@ -118,7 +118,7 @@ SPC-gb "show git blame of specific line/statement of current file" (Using gitsig
 SPC-gB "git blame file, not line as SPC-gb"
 SPC-gd "git diff" (Using git signs)
 SPC-gO "open gerrit home page"
-SPC-go "open gerrit with changeId. Need to copy changeId to clipboard first"
+SPC-go "open gerrit with changeId or commit hash. Need to copy them to clipboard first"
 ----------- END GIT ------------------
 
 ------------------ SEARCH -------------------
