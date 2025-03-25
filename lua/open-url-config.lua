@@ -50,7 +50,7 @@ vim.keymap.set("n", "<leader>go", function()
     print("No changeId copied to clip board")
 	return
   end
-  url = "<url>" .. changeId
+  url = "<url>/#/q/" .. changeId
  
   local open_cmd
   if vim.fn.has("linux") == 1 then
