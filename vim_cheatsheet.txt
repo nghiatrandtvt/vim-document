@@ -78,7 +78,7 @@ SPC-t9 "go to tab number 9"
 --------------- END TAB ACTION -------------------
  
 ---------------- NVIMTREE -----------------
-:Dt <dir> "open directory (NvimTree) with new tab. This is user-defined command, must be capital letter"
+:Dirtab <dir> "open directory (NvimTree) with new tab. This is user-defined command, must be capital letter"
 
 SPC-df "nvimtreefind"
 SPC-dt "nvimtreetoggle"
@@ -116,6 +116,7 @@ SPC-gl "show git commit of repo" (Using telescope)
 SPC-gf "show git history of current buffer or current file" (Using telescope)
 SPC-gb "show git blame of specific line/statement of current file" (Using gitsigns)
 SPC-gd "git diff" (Using git signs)
+SPC-gO "open gerrit home page"
 ----------- END GIT ------------------
 
 ------------------ SEARCH -------------------
