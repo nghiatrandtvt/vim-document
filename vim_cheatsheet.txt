@@ -115,6 +115,7 @@ SPC-tt "open terminal in new tab"
 SPC-gl "show git commit of repo" (Using telescope)
 SPC-gf "show git history of current buffer or current file" (Using telescope)
 SPC-gb "show git blame of specific line/statement of current file" (Using gitsigns)
+SPC-gB "git blame file, not line as SPC-gb"
 SPC-gd "git diff" (Using git signs)
 SPC-gO "open gerrit home page"
 ----------- END GIT ------------------
