@@ -73,4 +73,4 @@ vim.keymap.set("n", "<leader>go", function()
  
   print("Opening: " .. url)
   vim.fn.jobstart({open_cmd, url}, {detach = true})
-end, { desc = "Open-Gerrit-with-changeId" })
+end, { desc = "Open-Gerrit-with-changeId-or-commit-hash" })
