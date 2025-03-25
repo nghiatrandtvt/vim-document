@@ -46,8 +46,15 @@ end, { desc = "Open-Gerrit-home-page" })
 
 vim.keymap.set("n", "<leader>go", function()
   local changeId = vim.fn.getreg('+')
+  print("Value in clipboard: " .. changeId)
+  
+  if changeId:sub(1, 1) ~= "I" then
+    local cmd = string.format("git show %s | grep 'Change-Id' | awk '{print $2}'", changeId)
+	changeId = vim.fn.system(cmd):gsub("\n", "")
+  end
+  
   if changeId == "" then
-    print("No changeId copied to clip board")
+    print("No changeId")
 	return
   end
   url = "<url>/#/q/" .. changeId
