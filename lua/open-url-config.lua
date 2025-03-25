@@ -42,4 +42,4 @@ vim.keymap.set("n", "<leader>gO", function()
  
   print("Opening: " .. url)
   vim.fn.jobstart({open_cmd, url}, {detach = true})
-end, { desc = "Open-Gerrit-in-browser" })
+end, { desc = "Open-Gerrit-home-page" })
