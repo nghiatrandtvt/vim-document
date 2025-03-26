@@ -20,6 +20,8 @@ inoremap <C-v> <Esc>"+pi
 " command alias 
 " open nvimtree in combination with new tab
 command! -complete=dir -nargs=* Dt tabnew | execute 'NvimTreeOpen' <q-args>
+
+command! -nargs=1 CopyToClipboard let @+ = <q-args> | echo "Copied to clipboard: " . <q-args>
  
 " use up/down arrow in wild mode (command mode when press TAB)
 cnoremap <expr> <Up> wildmenumode() ? "\<C-p>" : "\<Up>"
