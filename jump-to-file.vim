@@ -13,10 +13,10 @@ function! OpenFileAtCursor()
     endif
 endfunction
 
-function! OpenFileWithParh()
+function! OpenFileWithPath()
     let l:filepath = expand('<cfile>')
 	echo "Opening file: " . l:filepath
-	let l:path = input("Enter file path: ", "", "file")
+	let l:path = input("Enter file path: ", getcwd(), "file")
 	if empty(l:path)
 		echo("No file path provided.")
 		return
