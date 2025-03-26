@@ -27,3 +27,38 @@ function OpenFileAtCursorPwd()
     print("No such file: " .. filepath)
   end
 end
+
+vim.keymap.set("v", "<leader>jf", function()
+	vim.cmd('normal! "zy')
+	local filepath = vim.fn.getreg('z')
+
+    if vim.fn.filereadable(filepath) == 1 then
+		vim.cmd('tabedit ' .. vim.fn.fnameescape(filepath))
+	else
+		print("No such file: " .. filepath)
+	end
+end, { desc = "open-selected-file" })
+
+vim.keymap.set("v", "<leader>jp", function()
+  vim.cmd('normal! "zy')
+  local selected_file = vim.fn.getreg('z')
+  
+  local dir = vim.fn.input("Enter path: ", vim.fn.getcwd(), "dir")
+  if dir == "" then
+    print("No directory specified")
+    return
+  end
+  
+  if vim.fn.isdirectory(dir) == 0 then
+    print("Invalid directory: " .. dir)
+    return
+  end
+  
+  selected_file = dir .. '/' .. selected_file
+
+  if vim.fn.filereadable(selected_file) == 1 then
+    vim.cmd('tabedit ' .. vim.fn.fnameescape(selected_file))
+  else
+	print("No such file: " .. selected_file)
+  end
+end, { desc = "open-selected-file-with-path" })
