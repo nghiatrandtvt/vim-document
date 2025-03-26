@@ -246,9 +246,9 @@ ds[ "delete [ and its closed ]. Using vim surround plugin"
 --------------- OPEN BROWSER -------------------
 gx "leave the cursor on the link and type gx to open URL"
 
-SPC-jf "open file at cursor"
+SPC-jf "open file at cursor or selected file in VISUAL mode"
 SPC-jF "goto file at cursor at pwd"
-SPC-jp "open file at cursor with path"
+SPC-jp "open file at cursor with path or selected file with path in VISUAL mode"
 SPC-jd "goto dir at cursor"
 SPC-ju "open selected url in VISUAL mode"
 
