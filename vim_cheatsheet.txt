@@ -119,6 +119,8 @@ SPC-gB "git blame file, not line as SPC-gb"
 SPC-gd "git diff" (Using git signs)
 SPC-gO "open gerrit home page"
 SPC-go "open gerrit with changeId or commit hash. Need to copy them to clipboard first"
+
+:CopyToClipboard <string_to_copy> "copy string to clipboard. It mostly use to open gerrit when we must type commit hash by hand"
 ----------- END GIT ------------------
 
 ------------------ SEARCH -------------------
