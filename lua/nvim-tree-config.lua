@@ -14,3 +14,8 @@ require("nvim-tree").setup({
     enable = true,
   },
 })
+
+vim.api.nvim_set_hl(0, "NvimTreeSymlink", { fg = "#98e4de", italic = true })
+vim.api.nvim_set_hl(0, "NvimTreeFolderArrowClosed", { fg = "#FFFF00" })
+vim.api.nvim_set_hl(0, "NvimTreeFolderArrowOpen", { fg = "#70dbb7" })
+vim.api.nvim_set_hl(0, "NvimTreeExecFile", { fg = "#00FF00" })
