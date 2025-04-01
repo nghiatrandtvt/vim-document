@@ -39,7 +39,7 @@ wk.add({
   { "<leader>dt", "<cmd>NvimTreeToggle<cr>", desc = "directory-toggle" },
   { "<leader>df", "<cmd>NvimTreeFindFile<cr>", desc = "directory-find" },
   { "<leader>dj", "<cmd>NvimTreeFocus<cr>", desc = "jump-to-dir-window" },
-  { "<leader>dj", "<cmd>NvimTreeClose<cr>", desc = "close-dir-window" },
+  { "<leader>dc", "<cmd>NvimTreeClose<cr>", desc = "close-dir-window" },
   { "<leader>dr", "<cmd>NvimTreeRefresh<cr>", desc = "refresh-dir" },
   
   { "<leader>f", group = "file-copy" },
