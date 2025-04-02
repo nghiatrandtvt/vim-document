@@ -12,6 +12,16 @@ local function checkout_commit(prompt_bufnr)
   end
 end
 
+local function copy_commit_hash(prompt_bufnr)
+  local selection = action_state.get_selected_entry()
+  if selection then
+    local commit_hash = selection.value:match("^%S+")
+    vim.fn.setreg('+', commit_hash)
+    actions.close(prompt_bufnr)
+    print("Copied commit hash to clipboard: " .. commit_hash)
+  end
+end
+
 require('telescope').setup{
   defaults = {
     prompt_prefix = "🔍 ",
@@ -25,9 +35,11 @@ require('telescope').setup{
       mappings = {
         i = {
           ["<CR>"] = checkout_commit,
+		  ["<C-y>"] = copy_commit_hash,
         },
         n = {
           ["<CR>"] = checkout_commit,
+		  ["<C-y>"] = copy_commit_hash,
         },
       },
     },
