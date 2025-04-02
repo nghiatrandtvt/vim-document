@@ -43,6 +43,16 @@ require('telescope').setup{
         },
       },
     },
+	git_bcommits = {
+      mappings = {
+        i = {
+		  ["<C-y>"] = copy_commit_hash,
+        },
+        n = {
+		  ["<C-y>"] = copy_commit_hash,
+        },
+      },
+    },
   },
 }
 
