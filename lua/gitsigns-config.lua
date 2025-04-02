@@ -15,18 +15,13 @@ require('gitsigns').setup {
   linehl     = false,
   current_line_blame = true, -- enable display virtual git blame.
   word_diff  = false,
- 
-  on_attach = function(bufnr)
-    local gs = package.loaded.gitsigns
- 
-    -- Keymaps
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', ']c', '<cmd>lua require"gitsigns".next_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '[c', '<cmd>lua require"gitsigns".prev_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>hs', '<cmd>lua require"gitsigns".stage_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>hr', '<cmd>lua require"gitsigns".reset_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>hp', '<cmd>lua require"gitsigns".preview_hunk()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gb', '<cmd>lua require"gitsigns".blame_line{ full = true }<CR>', { noremap = true, silent = true, desc = "git-blame-line" })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gB', '<cmd>lua require"gitsigns".blame{ full = true }<CR>', { noremap = true, silent = true, desc = "git-blame" })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gd', '<cmd>lua require"gitsigns".diffthis()<CR>', { noremap = true, silent = true, desc = "git-diff-current-file" })
-  end
 }
+
+vim.api.nvim_set_keymap('n', ']c', '<cmd>lua require"gitsigns".next_hunk()<CR>', { noremap = true, silent = true, desc = "next-hunk" })
+vim.api.nvim_set_keymap('n', '[c', '<cmd>lua require"gitsigns".prev_hunk()<CR>', { noremap = true, silent = true, desc = "previous-hunk" })
+vim.api.nvim_set_keymap('n', '<leader>hs', '<cmd>lua require"gitsigns".stage_hunk()<CR>', { noremap = true, silent = true, desc = "stage-hunk" })
+vim.api.nvim_set_keymap('n', '<leader>hr', '<cmd>lua require"gitsigns".reset_hunk()<CR>', { noremap = true, silent = true, desc = "reset-hunk" })
+vim.api.nvim_set_keymap('n', '<leader>hp', '<cmd>lua require"gitsigns".preview_hunk()<CR>', { noremap = true, silent = true, desc = "preview-hunk" })
+vim.api.nvim_set_keymap('n', '<leader>gb', '<cmd>lua require"gitsigns".blame_line{ full = true }<CR>', { noremap = true, silent = true, desc = "git-blame-line" })
+vim.api.nvim_set_keymap('n', '<leader>gB', '<cmd>lua require"gitsigns".blame{ full = true }<CR>', { noremap = true, silent = true, desc = "git-blame" })
+vim.api.nvim_set_keymap('n', '<leader>gd', '<cmd>lua require"gitsigns".diffthis()<CR>', { noremap = true, silent = true, desc = "git-diff-current-file" })
