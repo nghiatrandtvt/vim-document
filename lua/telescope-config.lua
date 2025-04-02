@@ -1,3 +1,17 @@
+local actions = require("telescope.actions")
+local action_state = require("telescope.actions.state")
+
+local function checkout_commit(prompt_bufnr)
+  local selection = action_state.get_selected_entry()
+  if selection then
+    local commit_hash = selection.value:match("^%S+")
+
+    actions.close(prompt_bufnr)
+    vim.fn.system("git checkout " .. commit_hash)
+    print("Checked out commit: " .. commit_hash)
+  end
+end
+
 require('telescope').setup{
   defaults = {
     prompt_prefix = "🔍 ",
@@ -5,7 +19,19 @@ require('telescope').setup{
 	vimgrep_arguments = {
 	  'ag', '--nocolor', '--noheading', '--numbers', '--column'
 	}
-  }
+  },
+  pickers = {
+    git_commits = {
+      mappings = {
+        i = {
+          ["<CR>"] = checkout_commit,
+        },
+        n = {
+          ["<CR>"] = checkout_commit,
+        },
+      },
+    },
+  },
 }
 
 vim.api.nvim_create_autocmd("User", {
