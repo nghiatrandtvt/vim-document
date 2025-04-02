@@ -26,6 +26,7 @@ require('gitsigns').setup {
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>hr', '<cmd>lua require"gitsigns".reset_hunk()<CR>', { noremap = true, silent = true })
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>hp', '<cmd>lua require"gitsigns".preview_hunk()<CR>', { noremap = true, silent = true })
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gb', '<cmd>lua require"gitsigns".blame_line{ full = true }<CR>', { noremap = true, silent = true, desc = "git-blame-line" })
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gB', '<cmd>lua require"gitsigns".blame{ full = true }<CR>', { noremap = true, silent = true, desc = "git-blame" })
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gd', '<cmd>lua require"gitsigns".diffthis()<CR>', { noremap = true, silent = true, desc = "git-diff-current-file" })
   end
 }
