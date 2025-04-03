@@ -264,3 +264,10 @@ SPC-fa "copy absolutely current file"
 SPC-fr "copy relative current file"
 SPC-fn "copy only filename"
 ---------------- END FILE COPY -------------------
+
+---------------- FOLD/UNFOLD ---------------------
+zc "fold block at the cursor"
+zo "unfold block at the cursor"
+zM "fold all"
+zR "unfold all"
+-------------- END FOLD/UNFOLD -------------------
