@@ -274,3 +274,8 @@ zO "unfold block at the cursor, unfold all"
 zM "fold all"
 zR "unfold all"
 -------------- END FOLD/UNFOLD -------------------
+
+-------------- DIFF -------------------------
+:diffthis "Diff current buffers to each other. At the current buffer, type diffthis and on another buffer type diffthis again. Can apply to multiple buffers"
+:windo diffthis "diff all opening buffers"
+------------ END DIFF -----------------------
