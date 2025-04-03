@@ -279,3 +279,24 @@ zR "unfold all"
 :diffthis "Diff current buffers to each other. At the current buffer, type diffthis and on another buffer type diffthis again. Can apply to multiple buffers"
 :windo diffthis "diff all opening buffers"
 ------------ END DIFF -----------------------
+
+---------------------- GIT FUGITIVE ------------------
+################ Git command in command mode such as :Git :G :G diff :Git diff :Gdiffsplit
+:G or :Git "open new window to display same as doing git status"
+:G diff "compare file from working directory against stage area"
+:G diff --staged "compare file from stage area against local repository"
+:G diff HEAD "compare file from working directory against HEAD of local repository"
+:G diff <commit_hash> "compare file from working directory against specific commit of local repository"
+:G diff <commit_hash_1> <commit_hash_2> "compare file of specific commit 1 against specific commit 2"
+################
+ 
+################ Key mapping on :G window (git stats)
+g? "open key mapping. Same as NvimTreeOpen plugin"
+s "stage the file under cursor from :Git window"
+u "unstage the file under cursor from :Git window"
+U "unstage every thing"
+X "discard the change of file under cursor to content in working directory even though the file already staged. Like checkout"
+= "toggle (turn on/off) the inline change for the file under cursor. If the file is unstaged, it will compare to staged one. If the file is staged, it will compare to local repository one"
+dp ":Git diff file under cursor. If file under cursor is unstaged, it will diff to staged one. If file under cursor is staged, it will diff to local repository one"
+#################
+-------------------- END GIT FUGITIVE ----------------
