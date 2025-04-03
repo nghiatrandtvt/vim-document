@@ -116,6 +116,7 @@ vim.api.nvim_set_keymap("n", "<leader>jp", ":call OpenFileWithPath()<CR>", { nor
 vim.api.nvim_set_keymap("n", "<leader>jd", ":call GotoDirAtCursor()<CR>", { noremap = true, silent = true, desc = "goto-dir-at-cursor" })
 vim.api.nvim_set_keymap("n", "<leader>jF", ":lua OpenFileAtCursorPwd()<CR>", { noremap = true, silent = true, desc = "goto-file-at-cursor-pwd-only-use-in-terminal" })
 
+require('nvim-treesitter-config')
 require('nvim-tree-config')
 require('nvim-web-devicons-config')
 require('whichkey')
