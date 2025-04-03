@@ -6,9 +6,16 @@ local function checkout_commit(prompt_bufnr)
   if selection then
     local commit_hash = selection.value:match("^%S+")
 
-    actions.close(prompt_bufnr)
-    vim.fn.system("git checkout " .. commit_hash)
-    print("Checked out commit: " .. commit_hash)
+    print("Checkout commit " .. commit_hash .. "? (y/n)")
+    local user_input = vim.fn.nr2char(vim.fn.getchar())
+    
+    if user_input:lower() == "y" then
+      actions.close(prompt_bufnr)
+      vim.fn.system("git checkout " .. commit_hash)
+      print("Checked out commit: " .. commit_hash)
+    else
+      print("Checkout cancelled")
+    end
   end
 end
 
