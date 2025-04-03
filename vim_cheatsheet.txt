@@ -54,6 +54,8 @@ SPC-bd "list buffer then delete the selected ones even though it is not saved ye
 
 :vsplit | b <n> "open buffer n-th with new vertical window"
 :split | b <n> "open buffer n-th with new horizontal window"
+
+M-d "delete selected buffer when opening in Telescope"
 ------------- END BUFFER ---------------
  
 ------------------ TAB -------------------
