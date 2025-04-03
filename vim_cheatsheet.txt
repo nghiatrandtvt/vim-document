@@ -267,7 +267,8 @@ SPC-fn "copy only filename"
 
 ---------------- FOLD/UNFOLD ---------------------
 zc "fold block at the cursor"
-zo "unfold block at the cursor"
+zo "unfold block at the cursor but just for closest one, like unfold one by one"
+zO "unfold block at the cursor, unfold all"
 zM "fold all"
 zR "unfold all"
 -------------- END FOLD/UNFOLD -------------------
