@@ -9,13 +9,14 @@ nnoremap <leader>bd :ls<CR>:bd!
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 inoremap <C-d> <Esc>ddi
-inoremap <C-k> <Esc>d$i
+inoremap <C-r> <Esc>d$i
+inoremap <C-l> <Esc>d0i
 
 inoremap <C-y> <Esc>^y$i
 nnoremap <C-y> ^y$
 
-nnoremap <C-v> "+p
-inoremap <C-v> <Esc>"+pi
+nnoremap <C-k> "+p
+inoremap <C-k> <Esc>"+pi
 
 " command alias 
 " open nvimtree in combination with new tab
