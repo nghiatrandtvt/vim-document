@@ -221,7 +221,7 @@ yi[ "copy words inner ["
 p "to paste after cursor (line after cursor, not same line with cursor)"
 P "to paste before cursor (line before cursor, not same line with cursor)"
 C-r " "paste from default register in INSERT mode"
-C-v "paste INSERT/NORMAL mode
+C-k "paste INSERT/NORMAL mode
 ----------------- END PASTE --------------------------
 
 -------------------- PASTE CLIPBOARD ----------------------------
@@ -238,8 +238,8 @@ di{ "delete wors inner {"
 di[ |delete words inner ["
 d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
 
-C-u "delete from cursor to beginning of line INSERT mode"
-C-k "delete from cursor to end of line INSERT mode"
+C-l "delete from cursor to beginning of line INSERT mode"
+C-r "delete from cursor to end of line INSERT mode"
 C-d "delete whole line INSERT mode. Actually do keybinding to <Esc>ddi"
 
 ds{ "delete { and its closed {. Using vim surround plugin"
@@ -282,6 +282,7 @@ zR "unfold all"
 
 ---------------------- GIT FUGITIVE ------------------
 ################ Git command in command mode such as :Git :G :G diff :Git diff :Gdiffsplit
+:Git <action> "to perform action and parameter such as :Git pull --rebase :Git commit --amend :Git clean"
 :G or :Git "open new window to display same as doing git status"
 :G diff "compare file from working directory against stage area"
 :G diff --staged "compare file from stage area against local repository"
@@ -298,5 +299,9 @@ U "unstage every thing"
 X "discard the change of file under cursor to content in working directory even though the file already staged. Like checkout"
 = "toggle (turn on/off) the inline change for the file under cursor. If the file is unstaged, it will compare to staged one. If the file is staged, it will compare to local repository one"
 dp ":Git diff file under cursor. If file under cursor is unstaged, it will diff to staged one. If file under cursor is staged, it will diff to local repository one"
+o "open file under cursor in status window in split window"
+gO "same as o but in vertical split"
+O "same as o but in new tab"
+1p "same as o but in preview mode (it will open directly at the status window, minimize status window)"
 #################
 -------------------- END GIT FUGITIVE ----------------
