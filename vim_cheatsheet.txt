@@ -238,8 +238,8 @@ di{ "delete wors inner {"
 di[ |delete words inner ["
 d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
 
-C-l "delete from cursor to beginning of line INSERT mode"
-C-r "delete from cursor to end of line INSERT mode"
+C-h "delete from cursor to beginning of line INSERT mode"
+C-l "delete from cursor to end of line INSERT mode"
 C-d "delete whole line INSERT mode. Actually do keybinding to <Esc>ddi"
 
 ds{ "delete { and its closed {. Using vim surround plugin"
