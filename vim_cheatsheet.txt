@@ -305,3 +305,5 @@ O "same as o but in new tab"
 1p "same as o but in preview mode (it will open directly at the status window, minimize status window)"
 #################
 -------------------- END GIT FUGITIVE ----------------
+
+C-v "select vertical from the cursor. Move the cursor down to select text"
