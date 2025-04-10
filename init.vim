@@ -50,6 +50,8 @@ Plug 'windwp/nvim-autopairs' "auto pair
 Plug 'tpope/vim-surround'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+Plug 'tpope/vim-fugitive'
 call plug#end()
  
 " THEME
@@ -87,11 +89,6 @@ set clipboard=unnamedplus "always copy to clipboard register, not default regist
 						  "always fetch from clipboard register
 						  "clipboard register is "+
 						  "default register is "0 or "
- 
-
-
-set undofile
-set undodir=<neovim_config_path>/undodir
 
 " update file content realtime (for example when change branch or change commit on Git)
 set autoread
@@ -140,9 +137,7 @@ require'lspconfig'.clangd.setup{
 require'lspconfig'.pyright.setup{ capabilities = capabilities }
 require'lspconfig'.bashls.setup{}
 
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap=true, silent=true })
 vim.keymap.set("n", 'gr', require("telescope.builtin").lsp_references, { noremap = true, silent = true })
+vim.keymap.set("n", 'gd', require("telescope.builtin").lsp_implementations, { noremap = true, silent = true })
 
 EOF
-
-highlight TelescopeSelection guibg=#800080 "telescope
