@@ -30,7 +30,7 @@ wk.add({
   { "<leader>tc", "<cmd>Telescope commands<cr>", desc = "show-commands" },
   
   { "<leader>s", group = "search" },
-  { "<leader>sf", "<cmd>Files<cr>", desc = "search-file-current-dir" },
+  { "<leader>sf", "<cmd>Telescope find_files<cr>", desc = "search-file-current-dir" },
   { "<leader>ss", "<cmd>BLines<cr>", desc = "grep-string-current-file" },
   { "<leader>st", "<cmd>Lines<cr>", desc = "grep-string-all-buffers" },
   { "<leader>sa", "<cmd>Telescope live_grep<cr>", desc = "grep-string-current-dir" },
