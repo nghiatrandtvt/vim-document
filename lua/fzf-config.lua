@@ -104,3 +104,8 @@ vim.keymap.set("v", "<leader>sF", function()
     options = fzf_options,
   }, 0)
 end, { desc = "FZF-search-selected-file-with-input-dir" })
+
+vim.api.nvim_set_hl(0, 'FzfBorder', { fg = '#FED000', bg = 'NONE' })
+vim.g.fzf_colors = {
+  border = { 'fg', 'FzfBorder' },
+}
