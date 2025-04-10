@@ -72,6 +72,14 @@ vim.api.nvim_create_autocmd("User", {
   end
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "TelescopeResults",
+  callback = function()
+    vim.opt_local.number = true
+    vim.opt_local.relativenumber = false
+  end,
+})
+
 vim.keymap.set("n", "<leader>sca", function()
   local full_word = vim.fn.expand("<cword>")
   local word = full_word:match("^[^/]+") or full_word
