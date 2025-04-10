@@ -87,3 +87,6 @@ vim.keymap.set("v", "<leader>sa", function()
     default_text = selected_text,
   })
 end, { desc = "telescope-search-selected-text-current-dir" })
+
+vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#FED000" })
+vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#800080" })
