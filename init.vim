@@ -137,6 +137,14 @@ require'lspconfig'.clangd.setup{
 require'lspconfig'.pyright.setup{ capabilities = capabilities }
 require'lspconfig'.bashls.setup{}
 
+vim.diagnostic.config({
+  virtual_text = { current_line = true },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
 vim.keymap.set("n", 'gr', require("telescope.builtin").lsp_references, { noremap = true, silent = true })
 vim.keymap.set("n", 'gd', require("telescope.builtin").lsp_implementations, { noremap = true, silent = true })
 
