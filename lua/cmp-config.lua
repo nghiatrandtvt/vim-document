@@ -1,19 +1,65 @@
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local cmp = require("cmp")
+--local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+--local cmp = require("cmp")
  
-cmp.setup({
-  mapping = cmp.mapping.preset.insert({
-    ["<Tab>"] = cmp.mapping.select_next_item(),
-    ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-    ["<CR>"] = cmp.mapping.confirm({ select = true }),
-    ['<Left>'] = cmp.mapping.abort(),
-    ['<Right>'] = cmp.mapping.abort(),
-  }),
-  sources = cmp.config.sources({
-    { name = "nvim_lsp" },
-    { name = "buffer" },
-    { name = "path" },
-  })
-})
+--cmp.setup({
+--  mapping = cmp.mapping.preset.insert({
+--    ["<Tab>"] = cmp.mapping.select_next_item(),
+--    ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+--    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+--	['<Left>'] = cmp.mapping.abort(),
+--    ['<Right>'] = cmp.mapping.abort(),
+--  }),
+--  sources = cmp.config.sources({
+--    { name = "nvim_lsp" },
+--    { name = "buffer" },
+--    { name = "path" },
+--  })
+--})
 
+--cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require('cmp')
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = {
+    ['<Down>'] = cmp.mapping.select_next_item(),
+    ['<Up>'] = cmp.mapping.select_prev_item(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+	['<Left>'] = cmp.mapping.abort(),
+	['<Right>'] = cmp.mapping.abort(),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-h>'] = cmp.mapping(function(fallback)
+      if cmp.visible() and cmp.get_selected_entry() then
+        cmp.close()
+      end
+      vim.lsp.buf.signature_help()
+    end, { 'i' }),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  },
+  sources = {
+    { name = 'nvim_lsp', priority = 1000 },
+    { name = 'luasnip', priority = 750 },
+    { name = 'buffer', priority = 500 },
+    { name = 'path', priority = 250 },
+  },
+
+  completion = {
+    autocomplete = {
+      require('cmp.types').cmp.TriggerEvent.TextChanged,
+      require('cmp.types').cmp.TriggerEvent.InsertEnter,
+    },
+  },
+})
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
