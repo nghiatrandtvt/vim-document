@@ -244,6 +244,10 @@ C-d "delete whole line INSERT mode. Actually do keybinding to <Esc>ddi"
 
 ds{ "delete { and its closed {. Using vim surround plugin"
 ds[ "delete [ and its closed ]. Using vim surround plugin"
+
+:le "left adjustment. Means move the current line to the most left until see a character not space. Means delete spaces at the begining"
+d^ "delete from current cursor until see a charater not space. ^ means a charatier not space"
+0d^ "same d^ but move cursor to begining of the line. 0 mean begining of the line"
 -------------- END DELETE ---------------------
 
 --------------- OPEN BROWSER -------------------
