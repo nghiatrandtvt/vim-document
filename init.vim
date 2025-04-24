@@ -33,7 +33,7 @@ Plug 'hrsh7th/cmp-buffer'      " fetch data from current buffer
 Plug 'hrsh7th/cmp-cmdline'     " autocomplete for command line 
 Plug 'L3MON4D3/LuaSnip'        " snippet support
 
-Plug 'mbbill/undotree' "show history of file
+Plug 'mfussenegger/nvim-jdtls'
 
 Plug 'sindrets/winshift.nvim' "to swap window
 
