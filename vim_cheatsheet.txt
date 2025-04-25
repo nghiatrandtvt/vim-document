@@ -233,7 +233,14 @@ C-r + "paste from clipboard register in INSERT mode"
 dd "delete current line"
 d$ "delete current cursor to end of line (include cursor)"
 d0 "delete current cursor to begining of line (exclude cursor)"
+
+dgg "delete current line to begining line"
+dG "delete current line to last line"
+
 d<n>w "delete <n> words include current word"
+d<n>W "delete <n> words include current WORD"
+word: only contain azAZ09_
+WORD: every thing  and separate by <space>
 
 di{ "delete words inner {"
 di[ "delete words inner ["
