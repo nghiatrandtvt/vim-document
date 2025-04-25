@@ -134,7 +134,14 @@ require'lspconfig'.clangd.setup{
   filetypse = { "c", "cpp" },
   cmd = { "clangd", "--compile-commands-dir=<dir_to_compile_commands.json>" }
 }
-require'lspconfig'.pyright.setup{ capabilities = capabilities }
+require'lspconfig'.pyright.setup{
+  capabilities = capabilities,
+  settings = {
+    python = {
+      pythonPath = '<path_to_python_version>'
+    },
+  },
+}
 require'lspconfig'.bashls.setup{}
 
 vim.diagnostic.config({
