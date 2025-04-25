@@ -244,7 +244,8 @@ dT<char> "delete until <char> include <char>. for example: hello world, cursor i
 df<char> "delete until previous <char>. for example: hello world, cursor is at w, dfl will delete w o, result hellorld"
 dF<char> "delete until previous <char> include <char>. for example: hello world, cursor is at w, dFl will delete w ol, result helorld"
 
-d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
+d<n>l "delete <n> characters from cursor to right. Example d6l - delete 6 characters"
+d<n>h "delete <n> characters from cursor to left. Example d6l - delete 6 characters"
 
 C-h "delete from cursor to beginning of line INSERT mode"
 C-l "delete from cursor to end of line INSERT mode"
