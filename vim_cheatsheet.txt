@@ -234,8 +234,13 @@ dd "delete current line"
 d$ "delete current cursor to end of line (include cursor)"
 d0 "delete current cursor to begining of line (exclude cursor)"
 d<n>w "delete <n> words include current word"
-di{ "delete wors inner {"
-di[ |delete words inner ["
+
+di{ "delete words inner {"
+di[ "delete words inner ["
+
+dt{ "delete until {"
+dt[ "delete until ["
+
 d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
 
 C-h "delete from cursor to beginning of line INSERT mode"
