@@ -238,8 +238,11 @@ d<n>w "delete <n> words include current word"
 di{ "delete words inner {"
 di[ "delete words inner ["
 
-dt{ "delete until {"
-dt[ "delete until ["
+dt<char> "delete until <char>. for example: hello world, cursor is at w, dtl will delete wor, result hello ld"
+dT<char> "delete until <char> include <char>. for example: hello world, cursor is at w, dTl will delete worl, result hello d"
+
+df<char> "delete until previous <char>. for example: hello world, cursor is at w, dfl will delete w o, result hellorld"
+dF<char> "delete until previous <char> include <char>. for example: hello world, cursor is at w, dFl will delete w ol, result helorld"
 
 d<n>l "delete <n> characters from cursor. Example d6l - delete 6 characters"
 
