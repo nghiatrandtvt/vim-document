@@ -164,6 +164,9 @@ gr "go to reference"
 
 C-o "go backward"
 C-i "go forward"
+
+C-s "show all function parameters"
+C-k "show all keyword"
 ------------- END LSP ---------------
  
 ---------------- TELESCOPE ----------
