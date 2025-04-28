@@ -154,6 +154,6 @@ vim.diagnostic.config({
 
 vim.keymap.set("n", 'gr', require("telescope.builtin").lsp_references, { noremap = true, silent = true })
 vim.keymap.set("n", 'gd', require("telescope.builtin").lsp_implementations, { noremap = true, silent = true })
-vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, { noremap = true, silent = true })
+vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help, { noremap = true, silent = true })
 
 EOF
