@@ -49,6 +49,12 @@ require('telescope').setup{
 		  ["<C-y>"] = copy_commit_hash,
         },
       },
+	  git_command = {
+        "git",
+        "log",
+        "--pretty=%h %ci %s",
+        "--",
+      },
     },
 	git_bcommits = {
       mappings = {
@@ -58,6 +64,12 @@ require('telescope').setup{
         n = {
 		  ["<C-y>"] = copy_commit_hash,
         },
+      },
+	  git_command = {
+        "git",
+        "log",
+        "--pretty=%h %ci %s",
+        "--",
       },
     },
   },
