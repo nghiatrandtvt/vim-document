@@ -72,6 +72,8 @@ highlight TermNormal guibg=#333333
 
 highlight NvimTreeNormal guibg=#3f3f4e
 
+highlight WinSeparator guifg=#bd88bf
+
 set wildmode=longest:full,full "in COMMAND mode, when tab it will display long list of command
 set list
 set listchars=tab:→\ ,trail:·,extends:>,precedes:<,nbsp:·,eol:↲
