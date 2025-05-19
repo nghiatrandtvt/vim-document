@@ -68,7 +68,7 @@ set number "display line number
 " disable line number and set background color for specific buffer such as terminal buffer
 autocmd BufEnter,TermOpen,BufRead term://* setlocal nonumber norelativenumber "not display line number for some specific buffers such as terminal
 autocmd TermOpen,BufRead term://* setlocal winhighlight=Normal:TermNormal
-highlight TermNormal guibg=#333333
+highlight TermNormal guibg=#000000
 
 highlight NvimTreeNormal guibg=#3f3f4e
 
