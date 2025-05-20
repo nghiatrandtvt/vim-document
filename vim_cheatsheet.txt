@@ -341,6 +341,10 @@ O "same as o but in new tab"
 ? "open key mapping"
 C-x "exit sub-window. For example the window when open with ?"
 q "Exit lazygit"
+C-o "copy commit hash to clipboard. Then can open commit with spc-o"
+y "copy commit attributes such as commit hash, author ..."
+p "pull"
+r "rebase"
 ----------------- END LAZYGIT ------------------------
 
 ---------------------- MISC -----------------------------
