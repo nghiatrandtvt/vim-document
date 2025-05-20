@@ -59,4 +59,12 @@ wk.add({
   { "<leader>g", group = "git-action" },
   { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "show-file-commits" },
   { "<leader>gl", "<cmd>Telescope git_commits<CR>", desc = "show-repo-commits" },
+
+  { "<leader>gg", group = "lazygit-action" },
+  { "<leader>ggo", "<cmd>LazyGit<CR>", desc = "open-lazygit" },
+  { "<leader>ggc", "<cmd>LazyGitConfig<CR>", desc = "open-lazygit-config" },
+  { "<leader>ggf", "<cmd>LazyGitCurrentFile<CR>", desc = "open-lazygit-current-file" },
+  { "<leader>ggl", "<cmd>LazyGitLog<CR>", desc = "show-git-log-repo" },
+  { "<leader>ggh", "<cmd>LazyGitFilter<CR>", desc = "show-git-log" },
+  { "<leader>ggH", "<cmd>LazyGitFilterCurrentFile<CR>", desc = "show-git-log-current-file" },
 })
