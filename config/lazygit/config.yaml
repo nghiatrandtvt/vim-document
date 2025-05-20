@@ -1,3 +1,10 @@
 keybinding:
   universal:
     return: '<c-x>'
+gui:
+  theme:
+    inactiveBorderColor:
+    - cyan
+    activeBorderColor:
+    - magenta
+    - bold
