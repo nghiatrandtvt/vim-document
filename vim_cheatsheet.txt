@@ -340,7 +340,7 @@ O "same as o but in new tab"
 -------------------- LAZYGIT -------------------------
 ? "open key mapping"
 C-x "exit sub-window. For example the window when open with ?"
-x "Exit lazygit"
+q "Exit lazygit"
 ----------------- END LAZYGIT ------------------------
 
 ---------------------- MISC -----------------------------
