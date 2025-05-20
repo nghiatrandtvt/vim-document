@@ -337,4 +337,17 @@ O "same as o but in new tab"
 #################
 -------------------- END GIT FUGITIVE ----------------
 
+-------------------- LAZYGIT -------------------------
+? "open key mapping"
+C-x "exit sub-window. For example the window when open with ?"
+x "Exit lazygit"
+----------------- END LAZYGIT ------------------------
+
+---------------------- MISC -----------------------------
+% "jump to close/open bracket"
 C-v "select vertical from the cursor. Move the cursor down to select text"
+:<start>,<end>normal I<string_to_add> "Add string as the begining of selected multiple line start-end. Can use visual mode to choose the range"
+:<start>,<end>normal A<string_to_add> "Add string as the end of selected multiple line start-end. Can use visual mode to choose the range"
+C-a "increase number by one. For example, the cursor is at 1, C-a will increase one by each C-a"
+C-x "same as C-a but to decrease"
+-------------------- END MISC ---------------------------
