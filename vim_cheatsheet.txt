@@ -346,6 +346,8 @@ y "copy commit attributes such as commit hash, author ..."
 p "pull"
 r "rebase"
 0 "focus on preview panel. Then C-x to back to side panels"
++ "zoom out specific panel"
+_ "zoom in specific panel"
 ----------------- END LAZYGIT ------------------------
 
 ---------------------- MISC -----------------------------
