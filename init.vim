@@ -131,6 +131,7 @@ require('jdtls-config')
 require('fzf-config')
 require('nvim-treesitter-config')
 require('open-url-config')
+require('lazygit-config')
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require'lspconfig'.clangd.setup{ 
