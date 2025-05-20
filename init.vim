@@ -52,6 +52,8 @@ Plug 'tpope/vim-surround'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'tpope/vim-fugitive'
+
+Plug 'kdheepak/lazygit.nvim'
 call plug#end()
  
 " THEME
