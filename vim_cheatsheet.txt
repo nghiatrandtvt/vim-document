@@ -265,7 +265,7 @@ dF<char> "delete until previous <char> include <char>. for example: hello world,
 d<n>l "delete <n> characters from cursor to right. Example d6l - delete 6 characters"
 d<n>h "delete <n> characters from cursor to left. Example d6l - delete 6 characters"
 
-C-h "delete from cursor to beginning of line INSERT mode"
+C-a "delete from cursor to beginning of line INSERT mode"
 C-l "delete from cursor to end of line INSERT mode"
 C-d "delete whole line INSERT mode. Actually do keybinding to <Esc>ddi"
 
