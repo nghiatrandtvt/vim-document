@@ -1,9 +1,13 @@
 set path=(~/.local/bin $path)
 
-if ($?NVIM) then
-    setenv EDITOR 'nvr --remote-wait'
-    alias nvim 'nvr'
+if ($?NVIM_LISTEN_ADDRESS) then
+    alias nvim 'nvr -cc split --remote-wait +'"'"'set bufhidden=wipe'"'"'
+endif
+
+if ($?NVIM_LISTEN_ADDRESS) then
+    setenv VISUAL 'nvr -cc split --remote-wait +'"'"'set bufhidden=wipe'"'"'
+    setenv EDITOR 'nvr -cc split --remote-wait +'"'"'set bufhidden=wipe'"'"'
 else
+    setenv VISUAL nvim
     setenv EDITOR nvim
 endif
-setenv VISUAL "$EDITOR"
