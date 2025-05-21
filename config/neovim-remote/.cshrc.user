@@ -1,0 +1,9 @@
+set path=(~/.local/bin $path)
+
+if ($?NVIM) then
+    setenv EDITOR 'nvr --remote-wait'
+    alias nvim 'nvr'
+else
+    setenv EDITOR nvim
+endif
+setenv VISUAL "$EDITOR"
