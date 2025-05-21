@@ -6,3 +6,4 @@ ag "search engine for telescope. Need to install ag first"
 https://www.nerdfonts.com/font-downloads .Then copy and unzip inside ~/.local/share/fonts. Then run fc-cache-64 -fv to install fonts
 Need to install nerd font when using nvim-web-devicons plugin
 Install lazygit: https://github.com/jesseduffield/lazygit/releases and add PATH to lazygit binary file
+Install and configure neovim-remote: https://github.com/mhinz/neovim-remote/blob/master/INSTALLATION.md (should use pip3 install --user neovim-remote)
