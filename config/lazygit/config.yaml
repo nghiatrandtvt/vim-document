@@ -8,3 +8,10 @@ gui:
     activeBorderColor:
     - magenta
     - bold
+
+customCommands:
+  - key: '<c-p>'
+    command: 'git push origin HEAD:refs/for/{{.CheckedOutBranch.Name}}'
+    context: 'global'
+    loadingText: 'Pushing to refs/for branch...'
+    description: 'Push to Gerrit for review'
