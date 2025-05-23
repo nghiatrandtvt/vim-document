@@ -13,18 +13,18 @@ customCommands:
   - key: '<c-p>'
     command: 'git push origin HEAD:refs/for/{{.CheckedOutBranch.Name}}'
     context: 'commits'
-    showOutput: true
+    stream: true
     loadingText: 'Pushing to remote branch...'
     description: 'Custom: Do git push origin HEAD:refs/for/...'
     - key: '<c-p>'
     command: 'git pull --rebase'
     context: 'localBranches'
-    showOutput: true
+    stream: true
     loadingText: 'Pulling then rebase'
     description: 'Custom: Do git pull --rebase'
     - key: '<c-f>'
     command: 'git fetch'
     context: 'localBranches'
-    showOutput: true
+    stream: true
     loadingText: 'Fetching...'
     description: 'Custom: Do git fetch'
