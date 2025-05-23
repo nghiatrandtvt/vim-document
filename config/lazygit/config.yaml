@@ -12,6 +12,19 @@ gui:
 customCommands:
   - key: '<c-p>'
     command: 'git push origin HEAD:refs/for/{{.CheckedOutBranch.Name}}'
-    context: 'global'
-    loadingText: 'Pushing to refs/for branch...'
-    description: 'Push to Gerrit for review'
+    context: 'commits'
+    showOutput: true
+    loadingText: 'Pushing to remote branch...'
+    description: 'Custom: Do git push origin HEAD:refs/for/...'
+    - key: '<c-p>'
+    command: 'git pull --rebase'
+    context: 'localBranches'
+    showOutput: true
+    loadingText: 'Pulling then rebase'
+    description: 'Custom: Do git pull --rebase'
+    - key: '<c-f>'
+    command: 'git fetch'
+    context: 'localBranches'
+    showOutput: true
+    loadingText: 'Fetching...'
+    description: 'Custom: Do git fetch'
