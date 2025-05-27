@@ -9,6 +9,7 @@ nnoremap <leader>bd :ls<CR>:bd!
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 inoremap <C-d> <Esc>ddi
+inoremap <A-d> <Esc>diwi
 inoremap <C-l> <Esc>d$i
 inoremap <C-a> <Esc>d0i
 
