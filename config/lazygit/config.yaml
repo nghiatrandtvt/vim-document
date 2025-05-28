@@ -1,6 +1,7 @@
 keybinding:
   universal:
     return: '<c-x>'
+
 gui:
   theme:
     inactiveBorderColor:
@@ -11,11 +12,11 @@ gui:
 
 customCommands:
   - key: '<c-p>'
-    command: 'git push origin HEAD:refs/for/{{.CheckedOutBranch.Name}}'
+    command: 'git push origin HEAD:refs/for/master'
     context: 'commits'
     stream: true
-    loadingText: 'Pushing to remote branch...'
-    description: 'Custom: Do git push origin HEAD:refs/for/...'
+    loadingText: 'Pushing to remote master branch'
+    description: 'Custom: Do git push origin HEAD:refs/for/master'
     - key: '<c-p>'
     command: 'git pull --rebase'
     context: 'localBranches'
