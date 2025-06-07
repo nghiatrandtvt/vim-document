@@ -17,15 +17,22 @@ customCommands:
     stream: true
     loadingText: 'Pushing to remote master branch'
     description: 'Custom: Do git push origin HEAD:refs/for/master'
-    - key: '<c-p>'
+  - key: '<c-p>'
     command: 'git pull --rebase'
     context: 'localBranches'
     stream: true
     loadingText: 'Pulling then rebase'
     description: 'Custom: Do git pull --rebase'
-    - key: '<c-f>'
+  - key: '<c-f>'
     command: 'git fetch'
     context: 'localBranches'
     stream: true
     loadingText: 'Fetching...'
     description: 'Custom: Do git fetch'
+  - key: '<c-c>'
+    command: './scripts/open-commit-lazygit.sh {{.SelectedLocalCommit.Hash}}'
+    context: 'commits'
+    stream: true
+    loadingText: 'Openning {{.SelectedLocalCommit.Hash}}'
+    description: 'Custom: Do - open commit from browser'
+    subprocess: true
