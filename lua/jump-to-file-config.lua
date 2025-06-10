@@ -39,6 +39,17 @@ vim.keymap.set("v", "<leader>jf", function()
 	end
 end, { desc = "open-selected-file" })
 
+vim.keymap.set("n", "<leader>jf", function()
+	local filepath = vim.fn.expand('<cfile>')
+
+    if vim.fn.filereadable(filepath) == 1 then
+		print("Openning " .. filepath)
+		vim.cmd('tabedit ' .. vim.fn.fnameescape(filepath))
+	else
+		print("No such file: " .. filepath)
+	end
+end, { desc = "open-under-cursor-file" })
+
 vim.keymap.set("v", "<leader>jp", function()
   vim.cmd('normal! "zy')
   local selected_file = vim.fn.getreg('z')
