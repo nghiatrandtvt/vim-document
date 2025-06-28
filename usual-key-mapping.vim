@@ -8,6 +8,21 @@ nnoremap <leader>dw :NvimTreeResize
 nnoremap <leader>bd :ls<CR>:bd!
 nnoremap <leader>r :source $MYVIMRC<CR>
 
+inoremap <C-Left> <Esc>:wincmd h<CR>
+inoremap <C-Down> <Esc>:wincmd j<CR>
+inoremap <C-Up> <Esc>:wincmd k<CR>
+inoremap <C-Right> <Esc>:wincmd l<CR>
+
+tnoremap <C-Left> <C-\><C-n>:wincmd h<CR>
+tnoremap <C-Down> <C-\><C-n>:wincmd j<CR>
+tnoremap <C-Up> <C-\><C-n>:wincmd k<CR>
+tnoremap <C-Right> <C-\><C-n>:wincmd l<CR>
+
+nnoremap <C-Left> <Esc>:wincmd h<CR>
+nnoremap <C-Down> <Esc>:wincmd j<CR>
+nnoremap <C-Up> <Esc>:wincmd k<CR>
+nnoremap <C-Right> <Esc>:wincmd l<CR>
+
 inoremap <C-d> <Esc>ddi
 inoremap <A-d> <Esc>diwi
 inoremap <A-S-d> <Esc>diWi
