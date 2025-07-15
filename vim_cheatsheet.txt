@@ -81,10 +81,11 @@ SPC-t9 "go to tab number 9"
  
 ---------------- NVIMTREE -----------------
 :Dirtab <dir> "open directory (NvimTree) with new tab. This is user-defined command, must be capital letter"
+:Diropen <dir> "open directory (NvimTree). This is user-defined command, must be capital letter"
 
 SPC-df "nvimtreefind"
 SPC-dt "nvimtreetoggle"
-SPC-do "nvintreeopen"
+SPC-do "nvintreeopen
 SPC-dj "nvimtree focus - jump to nvimtree dir"
 SPC-dr "nvimtree refresh"
 SPC-dc "nvimtree close"
