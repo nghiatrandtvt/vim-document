@@ -37,7 +37,7 @@ inoremap <C-k> <Esc>"+pi
 
 " command alias 
 " open nvimtree in combination with new tab
-command! -complete=dir -nargs=* Dt tabnew | execute 'NvimTreeOpen' <q-args>
+command! -complete=dir -nargs=* Dirtab tabnew | execute 'tcd' <q-args> | execute 'NvimTreeOpen' <q-args>
 
 command! -nargs=1 CopyToClipboard let @+ = <q-args> | echo "Copied to clipboard: " . <q-args>
  
