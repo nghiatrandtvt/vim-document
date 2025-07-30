@@ -4,6 +4,8 @@ SPC-tk "using telescope to display all keymaps"
 SPC-tc "using telescope to display all commands"
 
 SPC-r "source .vimrc"
+
+C-b "show active buffer"
  
 -------------------- MOVING --------------------
 C-w-H "move all horizontal windows to verical windows"
