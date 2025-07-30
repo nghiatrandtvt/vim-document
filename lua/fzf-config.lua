@@ -16,21 +16,6 @@ vim.keymap.set("n", "<leader>scS", function()
   })
 end, { desc = "FzF-search-under-cursor-all-buf" })
 
-vim.keymap.set("n", "<leader>scf", function()
-  local full_path = vim.fn.expand("<cfile>")
-  if full_path == "" then
-    print("No file path under cursor")
-    return
-  end
-  
-  local filename = full_path:match("[^/]+$") or full_path
-  local fzf_options = "--color=hl:yellow,hl+:cyan --query " .. vim.fn.shellescape(filename)
-
-  vim.fn["fzf#vim#files"]("", {
-    options = fzf_options,
-  }, 0)
-end, { desc = "FZF-search-file-under-cursor-current-dir" })
-
 vim.keymap.set("n", "<leader>scF", function()
   local full_path = vim.fn.expand("<cfile>")
   if full_path == "" then
