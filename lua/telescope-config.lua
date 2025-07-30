@@ -108,6 +108,21 @@ vim.keymap.set("v", "<leader>sa", function()
   })
 end, { desc = "telescope-search-selected-text-current-dir" })
 
+vim.keymap.set("n", "<leader>scf", function()
+  local full_path = vim.fn.expand("<cfile>")
+  if full_path == "" then
+    print("No file path under cursor")
+    return
+  end
+  
+  local filename = full_path:match("[^/]+$") or full_path
+  require('telescope.builtin').find_files({
+    default_text = filename,
+    prompt_title = "Search File: " .. filename,
+  })
+
+end, { desc = "telescope-search-file-under-cursor-current-dir" })
+
 vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#FED000" })
 vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#3f3f4e" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { fg = "#00BFFF" })
