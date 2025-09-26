@@ -24,8 +24,17 @@ require('lualine').setup {
         {'branch', icon = {'',align='left', color={fg='yellow', gui = 'bold'}}}
     },
     lualine_c = {'filename'},
-    lualine_x = {get_window_number, 'filetype'},
+    lualine_x = {
+		{
+			function()
+				return vim.fn.getcwd()
+			end,
+		},
+		get_window_number,
+		'filetype'
+	},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   }
 }
+
