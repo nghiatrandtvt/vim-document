@@ -79,6 +79,8 @@ SPC-t9 "go to tab number 9"
 :tabprev "go to previous tab"
 :tabonly "close all other tabs"
 :tabclose "close current tab"
+:<n>tabclose "close tab nth"
+:<n>,<m> "close tab nth to mth"
 --------------- END TAB ACTION -------------------
  
 ---------------- NVIMTREE -----------------
@@ -364,3 +366,4 @@ C-v "select vertical from the cursor. Move the cursor down to select text"
 C-a "increase number by one. For example, the cursor is at 1, C-a will increase one by each C-a"
 C-x "same as C-a but to decrease"
 -------------------- END MISC ---------------------------
+
