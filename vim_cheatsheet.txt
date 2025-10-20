@@ -1,3 +1,5 @@
+: Then arrow up or arrow down to go to previous or next old commands
+
 :set fileformat=unix "to convert file to unix format"
 
 SPC-tk "using telescope to display all keymaps"
@@ -369,5 +371,6 @@ C-v "select vertical from the cursor. Move the cursor down to select text"
 C-a "increase number by one. For example, the cursor is at 1, C-a will increase one by each C-a"
 C-x "same as C-a but to decrease"
 -------------------- END MISC ---------------------------
+
 
 
