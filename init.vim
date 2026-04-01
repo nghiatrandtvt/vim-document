@@ -133,6 +133,7 @@ require('nvim-treesitter-config')
 require('open-url-config')
 require('lazygit-config')
 require('show_buffer')
+require('git_gerrit')
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require'lspconfig'.clangd.setup{ 
