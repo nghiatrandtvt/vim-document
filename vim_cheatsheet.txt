@@ -24,7 +24,6 @@ j "from command mode to move cursor to new below line w/o swith to insert mode"
 
 w "move to begining of next word"
 b "move to begining of previous word"
-% "jump to close/open bracket"
 ------------------- END MOVING -------------------
  
 ------------- WINDOW CLOSING ---------------
@@ -60,6 +59,8 @@ SPC-bd "list buffer then delete the selected ones even though it is not saved ye
 :split | b <n> "open buffer n-th with new horizontal window"
 
 M-d "delete selected buffer when opening in Telescope"
+
+:b# open previous buffer on same window
 ------------- END BUFFER ---------------
  
 ------------------ TAB -------------------
@@ -94,7 +95,6 @@ Alt + <- "to previous tab"
 
 SPC-df "nvimtreefind"
 SPC-dt "nvimtreetoggle"
-SPC-do "nvintreeopen
 SPC-dj "nvimtree focus - jump to nvimtree dir"
 SPC-dr "nvimtree refresh"
 SPC-dc "nvimtree close"
@@ -127,10 +127,11 @@ SPC-tt "open terminal in new tab"
 SPC-gl "show git commit of repo" (Using telescope)
 SPC-gf "show git history of current buffer or current file" (Using telescope)
 SPC-gb "show git blame of specific line/statement of current file" (Using gitsigns)
-SPC-gB "git blame file, not line as SPC-gb"
+SPC-gB "git blame file, not same as SPC-gb"
 SPC-gd "git diff" (Using git signs)
 SPC-gO "open gerrit home page"
 SPC-go "open gerrit with changeId or commit hash. Need to copy them to clipboard first"
+SPC-gc "copy full gerrit url. Need to copy them to clipboard first such as using inw key when do SPC-gB"
 
 :CopyToClipboard <string_to_copy> "copy string to clipboard. It mostly use to open gerrit when we must type commit hash by hand"
 C-y to copy hash commit to clipboard when only using Telescope git_commits or git_bcommits
@@ -353,8 +354,9 @@ O "same as o but in new tab"
 ? "open key mapping"
 C-x "exit sub-window. For example the window when open with ?"
 q "Exit lazygit"
-C-x "open commit on browser"
-C-o "copy commit hash to clipboard. Then can open commit with spc-go"
+
+o "open commit on browser"
+C-o "copy commit url to clipboard"
 y "copy commit attributes such as commit hash, author ..."
 p "pull"
 r "rebase"
@@ -371,6 +373,3 @@ C-v "select vertical from the cursor. Move the cursor down to select text"
 C-a "increase number by one. For example, the cursor is at 1, C-a will increase one by each C-a"
 C-x "same as C-a but to decrease"
 -------------------- END MISC ---------------------------
-
-
-
