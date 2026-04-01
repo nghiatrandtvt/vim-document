@@ -29,10 +29,19 @@ customCommands:
     stream: true
     loadingText: 'Fetching...'
     description: 'Custom: Do git fetch'
-  - key: '<c-c>'
+  - key: 'o'
     command: './scripts/open-commit-lazygit.sh {{.SelectedLocalCommit.Hash}}'
     context: 'commits'
     stream: true
     loadingText: 'Openning {{.SelectedLocalCommit.Hash}}'
     description: 'Custom: Do - open commit from browser'
     subprocess: true
+- key: '<c-o>'
+    command: './scripts/copy-commit-lazygit.sh {{.SelectedLocalCommit.Hash}}'
+    context: 'commits'
+    stream: true
+    loadingText: 'Copy {{.SelectedLocalCommit.Hash}}'
+    description: 'Custom: Do - copy commit url to clipboard'
+    subprocess: true
+git:
+  autoFetch: false
