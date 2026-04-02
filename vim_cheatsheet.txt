@@ -132,6 +132,8 @@ SPC-gd "git diff" (Using git signs)
 SPC-gO "open gerrit home page"
 SPC-go "open gerrit with changeId or commit hash. Need to copy them to clipboard first"
 SPC-gc "copy full gerrit url. Need to copy them to clipboard first such as using inw key when do SPC-gB"
+C-g "open a commit directly from editor"
+A-g "copy a commit directly from editor"
 
 :CopyToClipboard <string_to_copy> "copy string to clipboard. It mostly use to open gerrit when we must type commit hash by hand"
 C-y to copy hash commit to clipboard when only using Telescope git_commits or git_bcommits
