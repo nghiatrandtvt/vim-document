@@ -23,7 +23,7 @@ Plug 'folke/which-key.nvim' "which key
  
 Plug 'preservim/nerdcommenter' "comment/uncomment, <SPC>-cc, <SPC>-cu
  
-Plug 'neovim/nvim-lspconfig' "go to definition, go to define, auto import. Need to install clangd if using for c/c++, pyright for python
+"Plug 'neovim/nvim-lspconfig' "go to definition, go to define, auto import. Need to install clangd if using for c/c++, pyright for python
                              "see lsp section in vim cheatsheet to know how to use
 Plug 'nvimdev/lspsaga.nvim' "UI for lsp
  
@@ -127,7 +127,6 @@ require('lualine-config')
 require('glow-config')
 require('lspsaga-config')
 require('gitsigns-config')
-require('jdtls-config')
 require('fzf-config')
 require('nvim-treesitter-config')
 require('open-url-config')
@@ -135,21 +134,10 @@ require('lazygit-config')
 require('show_buffer')
 require('git_gerrit')
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-require'lspconfig'.clangd.setup{ 
-  capabilities = capabilities,
-  filetypse = { "c", "cpp" },
-  cmd = { "clangd", "--compile-commands-dir=<dir_to_compile_commands.json>" }
-}
-require'lspconfig'.pyright.setup{
-  capabilities = capabilities,
-  settings = {
-    python = {
-      pythonPath = '<path_to_python_version>'
-    },
-  },
-}
-require'lspconfig'.bashls.setup{}
+vim.lsp.enable('clangd')
+vim.lsp.enable('pyright')
+vim.lsp.enable('bashls')
+vim.lsp.enable('jdtls')
 
 vim.diagnostic.config({
   virtual_text = { current_line = true },
@@ -160,7 +148,9 @@ vim.diagnostic.config({
 })
 
 vim.keymap.set("n", 'gr', require("telescope.builtin").lsp_references, { noremap = true, silent = true })
-vim.keymap.set("n", 'gd', require("telescope.builtin").lsp_implementations, { noremap = true, silent = true })
+vim.keymap.set("n", 'gd', require("telescope.builtin").lsp_definitions, { noremap = true, silent = true })
+vim.keymap.set("n", 'gi', require("telescope.builtin").lsp_implementations, { noremap = true, silent = true })
 vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help, { noremap = true, silent = true })
+vim.keymap.set('n', '<C-s>', vim.lsp.buf.signature_help, { noremap = true, silent = true })
 
 EOF
