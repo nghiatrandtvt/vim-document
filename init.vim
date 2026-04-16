@@ -138,6 +138,7 @@ vim.lsp.enable('clangd')
 vim.lsp.enable('pyright')
 vim.lsp.enable('bashls')
 vim.lsp.enable('jdtls')
+vim.lsp.enable('lua_ls')
 
 vim.diagnostic.config({
   virtual_text = { current_line = true },

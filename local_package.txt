@@ -8,6 +8,8 @@ Need to install nerd font when using nvim-web-devicons plugin
 Install lazygit: https://github.com/jesseduffield/lazygit/releases and add PATH to lazygit binary file
 Install and configure neovim-remote: https://github.com/mhinz/neovim-remote/blob/master/INSTALLATION.md (should use pip3 install --user neovim-remote)
 
+Install Lua language server: https://github.com/LuaLS/lua-language-server/releases/tag/3.18.2
+
 
 NOTE: On window
 For jdtls, using jdtls.bat file instead of jdtls. Because jdtls.bat is using python so python needs to be installed ahead and add python to PATH. If you don't want to add python to PATH, you can open jdtls.bat and specify python with full path inside.
